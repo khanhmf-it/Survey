@@ -1,0 +1,44 @@
+## Build output
+[Bb]in/
+[Oo]bj/
+out/
+publish/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider / VS Code
+.idea/
+.vscode/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+!**/packages/build/
+
+## Logs
+*.log
+logs/
+
+## ASP.NET Core / Razor secrets
+appsettings.Development.json
+secrets.json
+
+## Local database files
+*.mdf
+*.ldf
+*.db
+*.sqlite
+*.sqlite3
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Node (if used for frontend tooling)
+node_modules/

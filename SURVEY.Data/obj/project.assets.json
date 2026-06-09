@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net8.0": {
       "AutoMapper/8.0.0": {
@@ -4718,30 +4718,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khanhmf\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages": {},
-    "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {},
+    "C:\\Users\\Kang Zang\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\SURVEY.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Kang Zang\\Downloads\\Survey\\Survey\\SURVEY.Data\\SURVEY.Data.csproj",
       "projectName": "SURVEY.Data",
-      "projectPath": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\SURVEY.Data.csproj",
-      "packagesPath": "C:\\Users\\khanhmf\\.nuget\\packages\\",
-      "outputPath": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\obj\\",
+      "projectPath": "C:\\Users\\Kang Zang\\Downloads\\Survey\\Survey\\SURVEY.Data\\SURVEY.Data.csproj",
+      "packagesPath": "C:\\Users\\Kang Zang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kang Zang\\Downloads\\Survey\\Survey\\SURVEY.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
-        "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\khanhmf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+        "C:\\Users\\Kang Zang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4749,18 +4742,16 @@
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
-        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Model\\SURVEY.Model.csproj": {
-              "projectPath": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Model\\SURVEY.Model.csproj"
+            "C:\\Users\\Kang Zang\\Downloads\\Survey\\Survey\\SURVEY.Model\\SURVEY.Model.csproj": {
+              "projectPath": "C:\\Users\\Kang Zang\\Downloads\\Survey\\Survey\\SURVEY.Model\\SURVEY.Model.csproj"
             }
           }
         }
@@ -4775,10 +4766,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Dapper": {
@@ -4821,12 +4813,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.27, 8.0.27]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.27, 8.0.27]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.27, 8.0.27]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

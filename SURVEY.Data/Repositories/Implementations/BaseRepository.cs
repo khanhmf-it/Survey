@@ -8,6 +8,7 @@ using SURVEY.Data.Repositories.Interfaces;
 using SURVEY.Model.Common;
 using SURVEY.Model.Common.Enum;
 using SURVEY.Model.Common.Helper;
+using SURVEY.Model.Models_SURVEY;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,9 @@ namespace SURVEY.Data.Repositories.Implementations
         protected readonly string _tableName;
         protected readonly IDbConnection _conn;
         private static IDbTransaction _transaction;
+        private IOptions<ConnectionStringOptions> options;
+        private AutoMapper.Configuration.IConfiguration configuration;
+
         private IEnumerable<PropertyInfo> GetProperties => typeof(T).GetProperties();
 
         public BaseRepository(DbContext context, IOptions<ConnectionStringOptions> options, IConfiguration configuration)
@@ -42,10 +46,16 @@ namespace SURVEY.Data.Repositories.Implementations
             _context = context;
             _dbSet = context.Set<T>();
             _connectionStringOptions = options.Value;
-            _connectionString = _connectionStringOptions.PCManagementConnection;
-            //_connectionString = configuration.GetConnectionString("PCManagementConnection");
-            _conn = new SqlConnection(_connectionStringOptions.PCManagementConnection);
+            _connectionString = _connectionStringOptions.SurveyConnection;
+            _conn = new SqlConnection(_connectionStringOptions.SurveyConnection);
             _tableName = GetTableName<T>();
+        }
+
+        public BaseRepository(SURVEYContext context, IOptions<ConnectionStringOptions> options, AutoMapper.Configuration.IConfiguration configuration)
+        {
+            _context = context;
+            this.options = options;
+            this.configuration = configuration;
         }
         #region Transaction
         public virtual void StartTransaction()

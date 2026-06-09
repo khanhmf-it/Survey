@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using SURVEY.Model.DTOs;
+using SURVEY.Model.Models_SURVEY;
 
 namespace SURVEY.Service.Configs.AutoMapper
 {
@@ -6,7 +8,7 @@ namespace SURVEY.Service.Configs.AutoMapper
     {
         public MappingProfile() 
         {
-
+            CreateMap<employee_evaluation, employee_evaluationDTO>().ReverseMap();
         }
     }
 }

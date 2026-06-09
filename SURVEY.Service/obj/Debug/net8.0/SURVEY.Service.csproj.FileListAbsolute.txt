@@ -15,3 +15,21 @@ C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.dll
 C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.pdb
 C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.pdb
 C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.S.1A3408B9.Up2Date
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.deps.json
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.dll
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.pdb
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.dll
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.dll
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.pdb
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.pdb
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.csproj.AssemblyReference.cache
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.AssemblyInfoInputs.cache
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.AssemblyInfo.cs
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.csproj.CoreCompileInputs.cache
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.sourcelink.json
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.S.1A3408B9.Up2Date
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.dll
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\refint\SURVEY.Service.dll
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.pdb
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\ref\SURVEY.Service.dll
