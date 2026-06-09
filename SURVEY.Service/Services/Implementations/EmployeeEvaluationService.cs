@@ -23,12 +23,12 @@ namespace SURVEY.Service.Services.Implementations
             _mapper = mapper;
         }
         // Get thông tin đánh giá của công nhân viên
-        public async Task<GenericResponse<List<employee_evaluationDTO>>> GetEvaluationsByEvaluatorIdAsync(string? employeeId, string? department, int? pageIndex, int? pageSize)
+        public async Task<GenericResponse<List<employee_evaluationDTO>>> GetEvaluationsByEvaluatorIdAsync(string? employeeId, string? department, DateTime? dateFrom, DateTime? dateTo, int? pageIndex, int? pageSize)
         {
             var result = new GenericResponse<List<employee_evaluationDTO>>();
             try
             {
-                var q = await _repo.GetEvaluationsByEvaluatorIdAsync(employeeId, department, pageIndex, pageSize);
+                var q = await _repo.GetEvaluationsByEvaluatorIdAsync(employeeId, department, dateFrom, dateTo, pageIndex, pageSize);
                 result.Data = _mapper.Map<List<employee_evaluationDTO>>(q);
                 result.Success = true;
             }

@@ -1,7 +1,9 @@
 wwwroot\css\Index.css
+wwwroot\css\Reviews.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\Index.js
+wwwroot\js\Reviews.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

@@ -2,7 +2,7 @@
     ViewData["Title"] = "Quản lý đánh giá";
 }
 <head>
-    <link rel="stylesheet" href="~/css/Index.css" />
+    <link rel="stylesheet" href="~/css/Reviews.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -54,7 +54,7 @@
         </div>
 
         <!-- STATISTICS CARDS -->
-        <div class="stats-section">
+@*         <div class="stats-section">
             <div class="stat-card">
                 <div class="stat-icon">📋</div>
                 <div class="stat-info">
@@ -83,7 +83,7 @@
                     <span class="stat-label">Số nhóm tham gia</span>
                 </div>
             </div>
-        </div>
+        </div> *@
 
         <!-- DATA TABLE -->
         <div class="table-section">
@@ -98,24 +98,55 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Mã NV</th>
-                            <th>Group/Phòng ban</th>
-                            <th>Thời gian</th>
-                            <th>Hợp tác (Điểm)</th>
-                            <th>Giao tiếp (Điểm)</th>
-                            <th>Đào tạo (Điểm)</th>
-                            <th>Trách nhiệm (Điểm)</th>
-                            <th>Kỷ luật (Điểm)</th>
-                            <th>Điểm TB</th>
-                            <th>Đề xuất cải tiến</th>
-                            <th>Thao tác</th>
+                            <th rowspan="2">STT</th>
+                            <th rowspan="2">Mã NV</th>
+                            <th rowspan="2">Group/Phòng ban</th>
+                            <th rowspan="2">Thời gian</th>
+                            <th colspan="5">Nhóm 1 - Hợp tác</th>
+                            <th colspan="5">Nhóm 2 - Giao tiếp</th>
+                            <th colspan="5">Nhóm 3 - Đào tạo</th>
+                            <th colspan="5">Nhóm 4 - Trách nhiệm</th>
+                            <th colspan="5">Nhóm 5 - Kỷ luật</th>
+                            <th rowspan="2">Đề xuất cải tiến</th>
+                            <th rowspan="2">Điểm TB</th>
+                            <th rowspan="2">Thao tác</th>
+                        </tr>
+                        <tr>
+                            <th>Điểm mạnh</th>
+                            <th>Điểm</th>
+                            <th>Cần cải thiện</th>
+                            <th>Điểm</th>
+                            <th>Tình huống</th>
+
+                            <th>Điểm mạnh</th>
+                            <th>Điểm</th>
+                            <th>Cần cải thiện</th>
+                            <th>Điểm</th>
+                            <th>Tình huống</th>
+
+                            <th>Điểm mạnh</th>
+                            <th>Điểm</th>
+                            <th>Cần cải thiện</th>
+                            <th>Điểm</th>
+                            <th>Tình huống</th>
+
+                            <th>Điểm mạnh</th>
+                            <th>Điểm</th>
+                            <th>Cần cải thiện</th>
+                            <th>Điểm</th>
+                            <th>Tình huống</th>
+
+                            <th>Điểm mạnh</th>
+                            <th>Điểm</th>
+                            <th>Cần cải thiện</th>
+                            <th>Điểm</th>
+                            <th>Tình huống</th>
                         </tr>
                     </thead>
                     <tbody id="reviewsTableBody">
                         <!-- Dữ liệu sẽ được load bằng JavaScript -->
                         <tr class="loading-row">
-                            <td colspan="12" style="text-align: center; padding: 60px;">
+                            <td colspan="32" style="text-align: center; padding: 60px;">
                                 <div class="loading-spinner"></div>
                                 <p>Đang tải dữ liệu...</p>
                             </td>
@@ -156,410 +187,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    // Mock data - thực tế sẽ lấy từ API/Controller
-    let allReviews = [
-        {
-            id: 1,
-            employeeId: "NV001",
-            group: "Nhóm Phát triển",
-            createdAt: "2024-01-15",
-            scores: {
-                teamwork: 5,
-                communication: 4,
-                training: 5,
-                responsibility: 4,
-                discipline: 5
-            },
-            goodPoints: {
-                teamwork: "Luôn hỗ trợ team",
-                communication: "Giao tiếp rõ ràng",
-                training: "Chia sẻ nhiều kiến thức",
-                responsibility: "Chủ động hoàn thành",
-                discipline: "Đi làm đúng giờ"
-            },
-            improvePoints: {
-                teamwork: "Cần phản hồi nhanh hơn",
-                communication: "Nên báo cáo thường xuyên",
-                training: "",
-                responsibility: "",
-                discipline: ""
-            },
-            examples: {
-                teamwork: "Dự án ABC",
-                communication: "Họp định kỳ",
-                training: "Training nội bộ",
-                responsibility: "Project X",
-                discipline: "Tháng 1/2024"
-            },
-            proposal: "Nên tổ chức thêm buổi sharing kiến thức hàng tuần"
-        },
-        {
-            id: 2,
-            employeeId: "NV002",
-            group: "Nhóm Phát triển",
-            createdAt: "2024-01-15",
-            scores: {
-                teamwork: 4,
-                communication: 3,
-                training: 4,
-                responsibility: 4,
-                discipline: 3
-            },
-            goodPoints: {
-                teamwork: "Phối hợp tốt",
-                communication: "Thân thiện",
-                training: "Hỗ trợ junior",
-                responsibility: "Có trách nhiệm",
-                discipline: "Tuân thủ quy định"
-            },
-            improvePoints: {
-                teamwork: "",
-                communication: "Cần rõ ràng hơn",
-                training: "",
-                responsibility: "",
-                discipline: "Cần cải thiện giờ giấc"
-            },
-            examples: {
-                teamwork: "Dự án DEF",
-                communication: "Email công việc",
-                training: "Mentor cho NV mới",
-                responsibility: "Task quan trọng",
-                discipline: "Đi muộn 2 lần"
-            },
-            proposal: "Cần nhắc nhở về giờ làm việc"
-        },
-        {
-            id: 3,
-            employeeId: "NV003",
-            group: "Nhóm Sale",
-            createdAt: "2024-01-16",
-            scores: {
-                teamwork: 3,
-                communication: 5,
-                training: 3,
-                responsibility: 4,
-                discipline: 4
-            },
-            goodPoints: {
-                teamwork: "Hỗ trợ đồng nghiệp",
-                communication: "Giao tiếp xuất sắc",
-                training: "Chia sẻ kinh nghiệm",
-                responsibility: "Chốt deal tốt",
-                discipline: "Đúng giờ"
-            },
-            improvePoints: {
-                teamwork: "Cần phối hợp nhóm hơn",
-                communication: "",
-                training: "Cần cập nhật kiến thức mới",
-                responsibility: "",
-                discipline: ""
-            },
-            examples: {
-                teamwork: "Chiến dịch Tết",
-                communication: "Presentation với khách",
-                training: "Đào tạo sản phẩm mới",
-                responsibility: "Deal 100k$",
-                discipline: "Full tuần"
-            },
-            proposal: "Nên tham gia thêm các khóa đào tạo về sản phẩm"
-        }
-    ];
-
-    let currentPage = 1;
-    let pageSize = 10;
-    let filteredReviews = [...allReviews];
-
-    // Helper: Tính điểm trung bình
-    function calculateAvgScore(review) {
-        let scores = review.scores;
-        let sum = scores.teamwork + scores.communication + scores.training + scores.responsibility + scores.discipline;
-        return (sum / 5).toFixed(1);
-    }
-
-    // Render bảng dữ liệu
-    function renderTable() {
-        const start = (currentPage - 1) * pageSize;
-        const end = start + pageSize;
-        const pageData = filteredReviews.slice(start, end);
-        const tbody = document.getElementById('reviewsTableBody');
-
-        if (pageData.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 60px;">📭 Không có dữ liệu đánh giá nào</td></tr>`;
-            document.getElementById('showingCount').innerText = '0';
-            return;
-        }
-
-        tbody.innerHTML = pageData.map((review, idx) => {
-            const avgScore = calculateAvgScore(review);
-            return `
-                <tr>
-                    <td>${start + idx + 1}</td>
-                    <td><strong>${review.employeeId}</strong></td>
-                    <td>${review.group}</td>
-                    <td>${formatDate(review.createdAt)}</td>
-                    <td>${renderScore(review.scores.teamwork)}</td>
-                    <td>${renderScore(review.scores.communication)}</td>
-                    <td>${renderScore(review.scores.training)}</td>
-                    <td>${renderScore(review.scores.responsibility)}</td>
-                    <td>${renderScore(review.scores.discipline)}</td>
-                    <td><span class="score-badge-sm">${avgScore}</span></td>
-                    <td class="proposal-preview">${truncate(review.proposal, 50)}</td>
-                    <td>
-                        <button class="action-btn view-btn" data-id="${review.id}">👁️ Xem</button>
-                    </td>
-                </tr>
-            `;
-        }).join('');
-
-        document.getElementById('showingCount').innerText = pageData.length;
-        document.getElementById('totalCount').innerText = filteredReviews.length;
-
-        // Gắn sự kiện cho nút xem chi tiết
-        document.querySelectorAll('.view-btn').forEach(btn => {
-            btn.addEventListener('click', () => showDetail(parseInt(btn.dataset.id)));
-        });
-
-        renderPagination();
-        updateStatistics();
-    }
-
-    function renderScore(score) {
-        const color = score >= 4 ? '#2ecc71' : (score >= 3 ? '#f39c12' : '#e74c3c');
-        return `<span class="score-dot" style="background: ${color}"></span> ${score}`;
-    }
-
-    function formatDate(dateStr) {
-        if (!dateStr) return '';
-        const date = new Date(dateStr);
-        return date.toLocaleDateString('vi-VN');
-    }
-
-    function truncate(str, len) {
-        if (!str) return '—';
-        return str.length > len ? str.substring(0, len) + '...' : str;
-    }
-
-    // Phân trang
-    function renderPagination() {
-        const totalPages = Math.ceil(filteredReviews.length / pageSize);
-        const pageNumbers = document.getElementById('pageNumbers');
-
-        let pagesHtml = '';
-        const maxVisible = 5;
-        let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
-        let endPage = Math.min(totalPages, startPage + maxVisible - 1);
-
-        if (endPage - startPage + 1 < maxVisible) {
-            startPage = Math.max(1, endPage - maxVisible + 1);
-        }
-
-        for (let i = startPage; i <= endPage; i++) {
-            pagesHtml += `<button class="page-num ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
-        }
-
-        pageNumbers.innerHTML = pagesHtml;
-
-        document.querySelectorAll('.page-num').forEach(btn => {
-            btn.addEventListener('click', () => {
-                currentPage = parseInt(btn.dataset.page);
-                renderTable();
-            });
-        });
-
-        const prevBtn = document.querySelector('[data-page="prev"]');
-        const nextBtn = document.querySelector('[data-page="next"]');
-        if (prevBtn) prevBtn.disabled = currentPage === 1;
-        if (nextBtn) nextBtn.disabled = currentPage === totalPages;
-    }
-
-    // Filter logic
-    function applyFilters() {
-        const employeeId = document.getElementById('searchEmployeeId').value.toLowerCase();
-        const group = document.getElementById('searchGroup').value.toLowerCase();
-        const dateFrom = document.getElementById('dateFrom').value;
-        const dateTo = document.getElementById('dateTo').value;
-
-        filteredReviews = allReviews.filter(review => {
-            if (employeeId && !review.employeeId.toLowerCase().includes(employeeId)) return false;
-            if (group && !review.group.toLowerCase().includes(group)) return false;
-            if (dateFrom && review.createdAt < dateFrom) return false;
-            if (dateTo && review.createdAt > dateTo) return false;
-            return true;
-        });
-
-        currentPage = 1;
-        renderTable();
-    }
-
-    // Cập nhật thống kê
-    function updateStatistics() {
-        document.getElementById('totalReviews').innerText = filteredReviews.length;
-
-        const uniqueEmployees = new Set(filteredReviews.map(r => r.employeeId));
-        document.getElementById('totalEmployees').innerText = uniqueEmployees.size;
-
-        let totalScore = 0;
-        filteredReviews.forEach(review => {
-            totalScore += parseFloat(calculateAvgScore(review));
-        });
-        const avgScore = filteredReviews.length > 0 ? (totalScore / filteredReviews.length).toFixed(1) : '0.0';
-        document.getElementById('avgScore').innerText = avgScore;
-
-        const uniqueGroups = new Set(filteredReviews.map(r => r.group));
-        document.getElementById('totalGroups').innerText = uniqueGroups.size;
-    }
-
-    // Xuất Excel
-    function exportToExcel() {
-        if (filteredReviews.length === 0) {
-            alert('Không có dữ liệu để xuất!');
-            return;
-        }
-
-        const exportData = filteredReviews.map((review, idx) => ({
-            'STT': idx + 1,
-            'Mã nhân viên': review.employeeId,
-            'Group/Phòng ban': review.group,
-            'Thời gian': formatDate(review.createdAt),
-            'Hợp tác (Điểm)': review.scores.teamwork,
-            'Giao tiếp (Điểm)': review.scores.communication,
-            'Đào tạo (Điểm)': review.scores.training,
-            'Trách nhiệm (Điểm)': review.scores.responsibility,
-            'Kỷ luật (Điểm)': review.scores.discipline,
-            'Điểm trung bình': calculateAvgScore(review),
-            'Đề xuất cải tiến': review.proposal || '—'
-        }));
-
-        // Chuyển đổi sang CSV
-        const headers = Object.keys(exportData[0]);
-        const csvRows = [];
-        csvRows.push(headers.join(','));
-
-        for (const row of exportData) {
-            const values = headers.map(header => {
-                const val = row[header];
-                return `"${String(val).replace(/"/g, '""')}"`;
-            });
-            csvRows.push(values.join(','));
-        }
-
-        const blob = new Blob(['\uFEFF' + csvRows.join('\n')], { type: 'text/csv;charset=utf-8;' });
-        const link = document.createElement('a');
-        const url = URL.createObjectURL(blob);
-        link.href = url;
-        link.setAttribute('download', `danh_gia_${new Date().toISOString().slice(0,19)}.csv`);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-    }
-
-    // Hiển thị modal chi tiết
-    function showDetail(id) {
-        const review = allReviews.find(r => r.id === id);
-        if (!review) return;
-
-        const modalBody = document.getElementById('modalBody');
-        modalBody.innerHTML = `
-            <div class="detail-section">
-                <div class="detail-header">
-                    <div><strong>Mã NV:</strong> ${review.employeeId}</div>
-                    <div><strong>Phòng ban:</strong> ${review.group}</div>
-                    <div><strong>Thời gian:</strong> ${formatDate(review.createdAt)}</div>
-                </div>
-
-                <div class="detail-scores">
-                    <h4>📊 Điểm chi tiết</h4>
-                    <div class="score-grid">
-                        <div>🤝 Hợp tác: <strong>${review.scores.teamwork}/5</strong> <span class="score-note">${review.goodPoints.teamwork || ''}</span></div>
-                        <div>💬 Giao tiếp: <strong>${review.scores.communication}/5</strong> <span class="score-note">${review.goodPoints.communication || ''}</span></div>
-                        <div>📚 Đào tạo: <strong>${review.scores.training}/5</strong> <span class="score-note">${review.goodPoints.training || ''}</span></div>
-                        <div>🎯 Trách nhiệm: <strong>${review.scores.responsibility}/5</strong> <span class="score-note">${review.goodPoints.responsibility || ''}</span></div>
-                        <div>⏰ Kỷ luật: <strong>${review.scores.discipline}/5</strong> <span class="score-note">${review.goodPoints.discipline || ''}</span></div>
-                    </div>
-                </div>
-
-                <div class="detail-improve">
-                    <h4>⚠️ Điểm cần cải thiện</h4>
-                    <ul>
-                        ${Object.entries(review.improvePoints).filter(([_, v]) => v).map(([k, v]) => `<li><strong>${getGroupName(k)}:</strong> ${v}</li>`).join('') || '<li>Không có</li>'}
-                    </ul>
-                </div>
-
-                <div class="detail-examples">
-                    <h4>📌 Tình huống minh họa</h4>
-                    <ul>
-                        ${Object.entries(review.examples).filter(([_, v]) => v).map(([k, v]) => `<li><strong>${getGroupName(k)}:</strong> ${v}</li>`).join('') || '<li>Không có</li>'}
-                    </ul>
-                </div>
-
-                <div class="detail-proposal">
-                    <h4>💡 Đề xuất cải tiến</h4>
-                    <p>${review.proposal || 'Không có đề xuất'}</p>
-                </div>
-            </div>
-        `;
-
-        document.getElementById('detailModal').style.display = 'flex';
-    }
-
-    function getGroupName(key) {
-        const names = {
-            teamwork: 'Hợp tác',
-            communication: 'Giao tiếp',
-            training: 'Đào tạo',
-            responsibility: 'Trách nhiệm',
-            discipline: 'Kỷ luật'
-        };
-        return names[key] || key;
-    }
-
-    // Event listeners
-    document.getElementById('searchBtn').addEventListener('click', applyFilters);
-    document.getElementById('resetBtn').addEventListener('click', () => {
-        document.getElementById('searchEmployeeId').value = '';
-        document.getElementById('searchGroup').value = '';
-        document.getElementById('dateFrom').value = '';
-        document.getElementById('dateTo').value = '';
-        filteredReviews = [...allReviews];
-        currentPage = 1;
-        renderTable();
-    });
-
-    document.getElementById('exportBtn').addEventListener('click', exportToExcel);
-    document.getElementById('pageSizeSelect').addEventListener('change', (e) => {
-        pageSize = parseInt(e.target.value);
-        currentPage = 1;
-        renderTable();
-    });
-
-    // Modal close
-    document.querySelector('.modal-close').addEventListener('click', () => {
-        document.getElementById('detailModal').style.display = 'none';
-    });
-    window.addEventListener('click', (e) => {
-        if (e.target === document.getElementById('detailModal')) {
-            document.getElementById('detailModal').style.display = 'none';
-        }
-    });
-
-    // Phân trang buttons
-    document.querySelector('[data-page="prev"]')?.addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            renderTable();
-        }
-    });
-    document.querySelector('[data-page="next"]')?.addEventListener('click', () => {
-        const totalPages = Math.ceil(filteredReviews.length / pageSize);
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderTable();
-        }
-    });
-
-    // Initial render
-    renderTable();
-</script>
+@section Scripts {
+    <script src="~/js/Reviews.js" asp-append-version="true"></script>
+}

@@ -20,7 +20,7 @@ namespace SURVEY.Data.Repositories.Implementations
             _context = context;
         }
         // Get thông tin đánh giá của công nhân viên
-        public async Task<List<employee_evaluation>> GetEvaluationsByEvaluatorIdAsync(string? employeeId, string? department, int? pageIndex, int? pageSize)
+        public async Task<List<employee_evaluation>> GetEvaluationsByEvaluatorIdAsync(string? employeeId, string? department, DateTime? dateFrom, DateTime? dateTo, int? pageIndex, int? pageSize)
         {
             var query = _context.employee_evaluations.AsQueryable();
             if (!string.IsNullOrEmpty(employeeId))
