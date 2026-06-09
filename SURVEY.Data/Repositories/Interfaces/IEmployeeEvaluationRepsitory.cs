@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SURVEY.Data.Repositories.Interfaces
 {
-    internal interface IEmployeeEvaluationRepsitory: IBaseRepository<employee_evaluation, int>
+    public interface IEmployeeEvaluationRepsitory: IBaseRepository<employee_evaluation, int>
     {
         // Get thông tin đánh giá của công nhân viên
         Task<List<employee_evaluation>> GetEvaluationsByEvaluatorIdAsync(string? employeeId, string? department, int? pageIndex, int? pageSize);
