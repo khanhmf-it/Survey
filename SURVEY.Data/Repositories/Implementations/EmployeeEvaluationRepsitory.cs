@@ -1,4 +1,4 @@
-﻿using AutoMapper.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using SURVEY.Data.Repositories.Interfaces;
 using SURVEY.Model.Common;

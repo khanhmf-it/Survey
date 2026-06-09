@@ -1103,7 +1103,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "AutoMapper": "8.0.0",
+          "AutoMapper": "10.1.1",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
@@ -1119,7 +1119,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "AutoMapper": "8.0.0",
+          "AutoMapper": "10.1.1",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "SURVEY.Data": "1.0.0",
           "SURVEY.Model": "1.0.0"

@@ -54,7 +54,6 @@ namespace SURVEY.Service.Services.Implementations
             catch (Exception ex)
             {
                 result.Message = ex.Message;
-                result.Data = false;
                 result.Success = false;
             }
             return result;

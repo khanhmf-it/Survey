@@ -14,6 +14,11 @@
         },
         "runtime": {
           "SURVEY.dll": {}
+        },
+        "resources": {
+          "ja/SURVEY.resources.dll": {
+            "locale": "ja"
+          }
         }
       },
       "AutoMapper/10.1.1": {

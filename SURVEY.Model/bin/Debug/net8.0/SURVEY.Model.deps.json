@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "SURVEY.Model/1.0.0": {
         "dependencies": {
-          "AutoMapper": "8.0.0",
+          "AutoMapper": "10.1.1",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0",
@@ -18,11 +18,11 @@
           "SURVEY.Model.dll": {}
         }
       },
-      "AutoMapper/8.0.0": {
+      "AutoMapper/10.1.1": {
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.1.1.0"
           }
         }
       },
@@ -764,12 +764,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AutoMapper/8.0.0": {
+    "AutoMapper/10.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-px8ZMtIq84dxciB29V+ZYOtsRLZP4JlflDDMW13LyeRdwsnIInzlcSHSxpWmVD6U3bbOl2FeLlgomnVtm0jvXw==",
-      "path": "automapper/8.0.0",
-      "hashPath": "automapper.8.0.0.nupkg.sha512"
+      "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "path": "automapper/10.1.1",
+      "hashPath": "automapper.10.1.1.nupkg.sha512"
     },
     "Azure.Core/1.25.0": {
       "type": "package",

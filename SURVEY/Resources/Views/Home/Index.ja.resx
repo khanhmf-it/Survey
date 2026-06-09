@@ -1,101 +1,351 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
-		Microsoft ResX Schema
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-		Version 1.3
-
-		The primary goals of this format is to allow a simple XML format 
-		that is mostly human readable. The generation and parsing of the 
-		various data types are done through the TypeConverter classes 
-		associated with the data types.
-
-		Example:
-
-		... ado.net/XML headers & schema ...
-		<resheader name="resmimetype">text/microsoft-resx</resheader>
-		<resheader name="version">1.3</resheader>
-		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-		<data name="Name1">this is my long string</data>
-		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-			[base64 mime encoded serialized .NET Framework object]
-		</data>
-		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-			[base64 mime encoded string representing a byte array form of the .NET Framework object]
-		</data>
-
-		There are any number of "resheader" rows that contain simple 
-		name/value pairs.
-
-		Each data row contains a name, and value. The row also contains a 
-		type or mimetype. Type corresponds to a .NET class that support 
-		text/value conversion through the TypeConverter architecture. 
-		Classes that don't support this are serialized and stored with the 
-		mimetype set.
-
-		The mimetype is used for serialized objects, and tells the 
-		ResXResourceReader how to depersist the object. This is currently not 
-		extensible. For a given mimetype the value must be set accordingly:
-
-		Note - application/x-microsoft.net.object.binary.base64 is the format 
-		that the ResXResourceWriter will generate, however the reader can 
-		read any of the formats listed below.
-
-		mimetype: application/x-microsoft.net.object.binary.base64
-		value   : The object must be serialized with 
-			: System.Serialization.Formatters.Binary.BinaryFormatter
-			: and then encoded with base64 encoding.
-
-		mimetype: application/x-microsoft.net.object.soap.base64
-		value   : The object must be serialized with 
-			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-			: and then encoded with base64 encoding.
-
-		mimetype: application/x-microsoft.net.object.bytearray.base64
-		value   : The object must be serialized into a byte array 
-			: using a System.ComponentModel.TypeConverter
-			: and then encoded with base64 encoding.
-	-->
-	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>評価</value>
+  </data>
+  <data name="HeroBadge" xml:space="preserve">
+    <value>📋 360度評価アンケート</value>
+  </data>
+  <data name="HeroTitle" xml:space="preserve">
+    <value>多面的な能力評価</value>
+  </data>
+  <data name="HeroDescription" xml:space="preserve">
+    <value>このアンケートは、上司・部下・同僚からの評価に基づき、協働、コミュニケーション、支援、責任感の度合いを把握することを目的としています。</value>
+  </data>
+  <data name="HeroSubDescription" xml:space="preserve">
+    <value>調査は、上司・部下・同僚からの多角的な評価に基づき、協力、コミュニケーション、サポート、責任感を記録することを目的としています。</value>
+  </data>
+  <data name="ResultNote" xml:space="preserve">
+    <value>✨ 結果は1on1での対話と、より良い職場環境づくりの基礎となります</value>
+  </data>
+  <data name="ScoreLegendTitle" xml:space="preserve">
+    <value>📊 評価スケール</value>
+  </data>
+  <data name="Score5Title" xml:space="preserve">
+    <value>非常に良い</value>
+  </data>
+  <data name="Score5Desc" xml:space="preserve">
+    <value>常に高いレベルで実行し、主体的に支援する</value>
+  </data>
+  <data name="Score5JpDesc" xml:space="preserve">
+    <value>常に高いレベルで実施</value>
+  </data>
+  <data name="Score4Title" xml:space="preserve">
+    <value>良い</value>
+  </data>
+  <data name="Score4Desc" xml:space="preserve">
+    <value>多くの場面で良好に実行できる</value>
+  </data>
+  <data name="Score4JpDesc" xml:space="preserve">
+    <value>多くの場面で良好</value>
+  </data>
+  <data name="Score3Title" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="Score3Desc" xml:space="preserve">
+    <value>基本的な業務を完了できる</value>
+  </data>
+  <data name="Score3JpDesc" xml:space="preserve">
+    <value>基本的な業務を遂行</value>
+  </data>
+  <data name="Score2Title" xml:space="preserve">
+    <value>改善が必要</value>
+  </data>
+  <data name="Score2Desc" xml:space="preserve">
+    <value>いくつかの側面で要件未達</value>
+  </data>
+  <data name="Score2JpDesc" xml:space="preserve">
+    <value>いくつかの点で改善必要</value>
+  </data>
+  <data name="Score1Title" xml:space="preserve">
+    <value>不十分</value>
+  </data>
+  <data name="Score1Desc" xml:space="preserve">
+    <value>期待水準に達していない</value>
+  </data>
+  <data name="Score1JpDesc" xml:space="preserve">
+    <value>期待を満たしていない</value>
+  </data>
+  <data name="EmployeeIdLabel" xml:space="preserve">
+    <value>👤 社員コード</value>
+  </data>
+  <data name="EmployeeIdPlaceholder" xml:space="preserve">
+    <value>例: F0000001</value>
+  </data>
+  <data name="EmployeeGroupLabel" xml:space="preserve">
+    <value>🏢 グループ / 部門</value>
+  </data>
+  <data name="EmployeeGroupPlaceholder" xml:space="preserve">
+    <value>例: 開発グループ</value>
+  </data>
+  <data name="EvaluationGroupsTitle" xml:space="preserve">
+    <value>🎯 5つの能力グループで評価</value>
+  </data>
+  <data name="Group1Title" xml:space="preserve">
+    <value>協働・チームワーク</value>
+  </data>
+  <data name="Group1SubTitle" xml:space="preserve">
+    <value>協働・チームワーク</value>
+  </data>
+  <data name="Group1Criteria1" xml:space="preserve">
+    <value>✓ チーム内外のメンバーと効果的に連携する</value>
+  </data>
+  <data name="Group1Criteria2" xml:space="preserve">
+    <value>✓ 業務中に協力的な姿勢を示す</value>
+  </data>
+  <data name="Group1Criteria3" xml:space="preserve">
+    <value>✓ 情報共有や同僚支援に積極的である</value>
+  </data>
+  <data name="StrengthLabel" xml:space="preserve">
+    <value>📝 良い点</value>
+  </data>
+  <data name="ScoreLabel" xml:space="preserve">
+    <value>⭐ 評価点</value>
+  </data>
+  <data name="ImproveLabel" xml:space="preserve">
+    <value>⚠️ 改善点</value>
+  </data>
+  <data name="SituationLabel" xml:space="preserve">
+    <value>📌 事例</value>
+  </data>
+  <data name="DefaultOption" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="Group1StrengthPlaceholder" xml:space="preserve">
+    <value>例: 常にチームをサポートする</value>
+  </data>
+  <data name="Group1ImprovePlaceholder" xml:space="preserve">
+    <value>例: さらに主体性を高める</value>
+  </data>
+  <data name="Group1SituationPlaceholder" xml:space="preserve">
+    <value>例: プロジェクトX</value>
+  </data>
+  <data name="Group2Title" xml:space="preserve">
+    <value>コミュニケーション・情報共有</value>
+  </data>
+  <data name="Group2SubTitle" xml:space="preserve">
+    <value>コミュニケーション・情報共有</value>
+  </data>
+  <data name="Group2Criteria1" xml:space="preserve">
+    <value>✓ 相手に応じて丁寧にコミュニケーションする</value>
+  </data>
+  <data name="Group2Criteria2" xml:space="preserve">
+    <value>✓ 情報を明確で分かりやすく伝える</value>
+  </data>
+  <data name="Group2Criteria3" xml:space="preserve">
+    <value>✓ 進捗を主体的に報告する</value>
+  </data>
+  <data name="Group2Criteria4" xml:space="preserve">
+    <value>✓ 連絡に迅速に対応する</value>
+  </data>
+  <data name="Group2StrengthPlaceholder" xml:space="preserve">
+    <value>例: Slackで進捗を明確に共有</value>
+  </data>
+  <data name="Group2ImprovePlaceholder" xml:space="preserve">
+    <value>例: 会議後に日次サマリーを共有</value>
+  </data>
+  <data name="Group2SituationPlaceholder" xml:space="preserve">
+    <value>例: Sprint Y - 機能Zの進捗更新</value>
+  </data>
+  <data name="Group3Title" xml:space="preserve">
+    <value>教育・他者支援</value>
+  </data>
+  <data name="Group3SubTitle" xml:space="preserve">
+    <value>教育・他者支援</value>
+  </data>
+  <data name="Group3Criteria1" xml:space="preserve">
+    <value>✓ 知識や経験を積極的に共有する</value>
+  </data>
+  <data name="Group3Criteria2" xml:space="preserve">
+    <value>✓ 他メンバーの業務を支援する</value>
+  </data>
+  <data name="Group3Criteria3" xml:space="preserve">
+    <value>✓ チーム全体の成長に貢献する</value>
+  </data>
+  <data name="Group3StrengthPlaceholder" xml:space="preserve">
+    <value>例: 新メンバーにコードベースを説明</value>
+  </data>
+  <data name="Group3ImprovePlaceholder" xml:space="preserve">
+    <value>例: トレーニング資料をより明確にする</value>
+  </data>
+  <data name="Group3SituationPlaceholder" xml:space="preserve">
+    <value>例: 3週目メンタリング - 技術デモ</value>
+  </data>
+  <data name="Group4Title" xml:space="preserve">
+    <value>責任感・主体性</value>
+  </data>
+  <data name="Group4SubTitle" xml:space="preserve">
+    <value>責任感・主体性</value>
+  </data>
+  <data name="Group4Criteria1" xml:space="preserve">
+    <value>✓ 担当業務に主体的に取り組む</value>
+  </data>
+  <data name="Group4Criteria2" xml:space="preserve">
+    <value>✓ 最後まで追跡し完了させる</value>
+  </data>
+  <data name="Group4Criteria3" xml:space="preserve">
+    <value>✓ 結果に責任を持ち、回避しない</value>
+  </data>
+  <data name="Group4StrengthPlaceholder" xml:space="preserve">
+    <value>例: 締切前にタスク完了</value>
+  </data>
+  <data name="Group4ImprovePlaceholder" xml:space="preserve">
+    <value>例: チケット確認の頻度を上げる</value>
+  </data>
+  <data name="Group4SituationPlaceholder" xml:space="preserve">
+    <value>例: プロジェクトB - リリース後の不具合対応</value>
+  </data>
+  <data name="Group5Title" xml:space="preserve">
+    <value>規律遵守・勤務時間管理</value>
+  </data>
+  <data name="Group5SubTitle" xml:space="preserve">
+    <value>規律遵守・勤務時間管理</value>
+  </data>
+  <data name="Group5Criteria1" xml:space="preserve">
+    <value>✓ 勤務時間（出勤・休憩）を守る</value>
+  </data>
+  <data name="Group5Criteria2" xml:space="preserve">
+    <value>✓ 時間を効果的に管理し、遅延を防ぐ</value>
+  </data>
+  <data name="Group5Criteria3" xml:space="preserve">
+    <value>✓ 変更や遅延時に事前連絡する</value>
+  </data>
+  <data name="Group5StrengthPlaceholder" xml:space="preserve">
+    <value>例: 規定どおりに出退勤する</value>
+  </data>
+  <data name="Group5ImprovePlaceholder" xml:space="preserve">
+    <value>例: 遅刻回数を減らす</value>
+  </data>
+  <data name="Group5SituationPlaceholder" xml:space="preserve">
+    <value>例: 急な休暇時に速やかに連絡</value>
+  </data>
+  <data name="ProposalTitle" xml:space="preserve">
+    <value>💡 改善提案</value>
+  </data>
+  <data name="ProposalPlaceholder" xml:space="preserve">
+    <value>改善提案があれば入力してください...</value>
+  </data>
+  <data name="ProposalHint" xml:space="preserve">
+    <value>改善提案があればご記入ください</value>
+  </data>
+  <data name="SubmitButton" xml:space="preserve">
+    <value>✓ 評価を送信</value>
+  </data>
 </root>

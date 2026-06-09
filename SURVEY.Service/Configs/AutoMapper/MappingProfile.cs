@@ -9,6 +9,7 @@ namespace SURVEY.Service.Configs.AutoMapper
         public MappingProfile() 
         {
             CreateMap<employee_evaluation, employee_evaluationDTO>().ReverseMap();
+            CreateMap<employee_evaluationDTO, employee_evaluation>().ReverseMap();
         }
     }
 }

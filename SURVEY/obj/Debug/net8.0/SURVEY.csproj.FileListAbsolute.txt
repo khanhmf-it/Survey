@@ -119,3 +119,10 @@ C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\SURVEY.Data.d
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\SURVEY.Service.dll
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\SURVEY.Service.pdb
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\SURVEY.Data.pdb
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\ja\SURVEY.resources.dll
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Home.Index.resources
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Shared._Layout.resources
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Home.Index.ja.resources
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Shared._Layout.ja.resources
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\obj\Debug\net8.0\SURVEY.csproj.GenerateResource.cache
+C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\obj\Debug\net8.0\ja\SURVEY.resources.dll
