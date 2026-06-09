@@ -1,0 +1,17 @@
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\bin\Debug\net8.0\SURVEY.Data.deps.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\bin\Debug\net8.0\SURVEY.Data.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\bin\Debug\net8.0\SURVEY.Data.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.AssemblyInfoInputs.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.AssemblyInfo.cs
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.csproj.CoreCompileInputs.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\refint\SURVEY.Data.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\ref\SURVEY.Data.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\bin\Debug\net8.0\SURVEY.Data.runtimeconfig.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\bin\Debug\net8.0\SURVEY.Model.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\bin\Debug\net8.0\SURVEY.Model.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.csproj.AssemblyReference.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.D.10651EA8.Up2Date
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Data\obj\Debug\net8.0\SURVEY.Data.genruntimeconfig.cache

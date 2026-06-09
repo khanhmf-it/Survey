@@ -1,0 +1,338 @@
+﻿<style>
+    body {
+        margin: 0;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a 45%, #0ea5e9);
+        min-height: 100vh;
+    }
+
+    .survey-page {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 24px auto;
+        max-width: 1300px;
+        color: #0f172a;
+        padding: 0 12px;
+    }
+
+    .section {
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    }
+
+    .section h2 {
+        background: linear-gradient(90deg, #dbeafe, #eff6ff);
+        margin: -20px -20px 18px;
+        padding: 12px 14px;
+        border-bottom: 1px solid #bfdbfe;
+        font-size: 1.08rem;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+
+    .table-wrap {
+        overflow-x: auto;
+    }
+
+    .survey-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.94rem;
+        min-width: 1020px;
+    }
+
+    .survey-table,
+    .survey-table th,
+    .survey-table td {
+        border: 1px solid #94a3b8;
+    }
+
+    .survey-table th {
+        background: #e0ecff;
+        font-weight: 700;
+    }
+
+    .survey-table td,
+    .survey-table th {
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .group-label {
+        background: #f8fafc;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .text-input,
+    .proposal-textarea,
+    .score-select {
+        width: 100%;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        background: #fff;
+        font: inherit;
+    }
+
+    .text-input {
+        padding: 7px 9px;
+        min-width: 160px;
+    }
+
+    .score-select {
+        min-width: 70px;
+        padding: 7px;
+    }
+
+    .proposal-textarea {
+        min-height: 110px;
+        padding: 10px;
+        resize: vertical;
+    }
+
+    .submit-wrap {
+        margin-top: 16px;
+    }
+
+    .submit-btn {
+        border: none;
+        background: linear-gradient(90deg, #2363eb, #0284c7);
+        color: #fff;
+        padding: 11px 20px;
+        border-radius: 10px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .submit-btn:hover {
+        filter: brightness(1.05);
+    }
+</style>
+
+<div class="survey-page">
+    <form method="post">
+        <div class="section">
+            <h2>1. Mục đích điều tra 調査の目的</h2>
+            <p>
+                Khảo sát nhằm ghi nhận mức độ hợp tác, giao tiếp, hỗ trợ và tinh thần trách nhiệm trong công việc
+                dựa trên đánh giá đa chiều từ cấp trên, cấp dưới và đồng nghiệp.
+            </p>
+            <p>
+                Kết quả khảo sát là cơ sở để thực hiện trao đổi 1-1 và đề xuất các biện pháp cải thiện,
+                hướng tới xây dựng môi trường làm việc tích cực.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>2. Bảng điểm đánh giá</h2>
+            <div class="table-wrap">
+                <table class="survey-table">
+                    <tr>
+                        <th>Điểm</th>
+                        <th>Mức đánh giá</th>
+                        <th>Giải thích (VI)</th>
+                        <th>説明 (JP)</th>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Rất tốt</td>
+                        <td>Luôn thực hiện tốt, chủ động hỗ trợ người khác</td>
+                        <td>常に高いレベルで実施し、周囲を積極的に支援する</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Tốt</td>
+                        <td>Thực hiện tốt trong hầu hết trường hợp</td>
+                        <td>多くの場面で良好に実施できる</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bình thường</td>
+                        <td>Hoàn thành công việc ở mức cơ bản</td>
+                        <td>基本的な業務は遂行できる</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Cần cải thiện</td>
+                        <td>Chưa đáp ứng tốt một số khía cạnh</td>
+                        <td>いくつかの点で改善が必要</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Kém</td>
+                        <td>Chưa đạt yêu cầu</td>
+                        <td>期待を満たしていない</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Đánh giá chi tiết (5 Groups)</h2>
+
+            <div class="table-wrap">
+                <table class="survey-table">
+                    <tr>
+                        <th>Group</th>
+                        <th>Nội dung</th>
+                        <th>Điểm tốt</th>
+                        <th>Chấm điểm Point</th>
+                        <th>Cần cải thiện</th>
+                        <th>Chấm điểm Point</th>
+                        <th>Situation</th>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3" class="group-label">(1)<br />Hợp tác &amp; làm việc nhóm<br />(Cooporation&amp;Team Work)<br />協働・チームワーク</td>
+                        <td>Phối hợp hiệu quả với thành viên trong và ngoài nhóm<br />チーム内外のメンバーと効果的に連携している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Thái độ hợp tác trong quá trình làm việc<br />業務における協働的な姿勢</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Sẵn sàng chia sẻ thông tin, hỗ trợ đồng đội<br />情報共有に積極的で、メンバーを支援する姿勢がある</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4" class="group-label">(2)<br />Giao tiếp &amp; Chia sẻ thông tin<br />(Communication&amp;HouRenSo)<br />コミュニケーション・情報共有</td>
+                        <td>Giao tiếp tôn trọng, phù hợp với đối tượng<br />相手に応じて適切かつ尊重したコミュニケーションができている</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Truyền đạt thông tin rõ ràng, dễ hiểu<br />情報を分かりやすく明確に伝達できている</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Chủ động báo cáo tiến độ công việc<br />業務の進捗を主体的に報告している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Phản hồi kịp thời khi được liên hệ<br />連絡を受けた際、適時に対応・返信している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3" class="group-label">(3)<br />Đào tạo &amp; Hỗ trợ người khác<br />(Training&amp;Support)<br />教育・他者支援</td>
+                        <td>Sẵn sàng chia sẻ kiến thức, kinh nghiệm<br />知識や経験を積極的に共有している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Hỗ trợ thành viên khác trong công việc<br />他のメンバーの業務を支援している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Đóng góp vào sự phát triển chung của nhóm<br />チーム全体の成長に貢献している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3" class="group-label">(4)<br />Tinh thần trách nhiệm &amp; tự chủ<br />(Responsibility &amp; Ownership)<br />責任感・主体性</td>
+                        <td>Chủ động trong công việc được giao<br />担当業務に主体的に取り組んでいる</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Theo dõi và hoàn thành công việc đến cùng<br />業務の進捗を管理し、最後までやり遂げている</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Có trách nhiệm với kết quả công việc, không né tránh<br />業務結果に対して責任を持ち、責任回避をしない姿勢がある</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3" class="group-label">(5)<br />Mức độ kỷ luật và tuân thủ thời gian làm việc<br />規律遵守・勤務時間管理</td>
+                        <td>Tuân thủ thời gian làm việc theo quy định (đi làm, nghỉ)<br />規定された勤務時間（出勤・退勤・休憩）を遵守している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Quản lý thời gian hiệu quả, hạn chế ảnh hưởng đến tiến độ chung<br />効率的に時間を管理し、全体の進捗に影響を与えないようにしている</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Chủ động thông báo khi có thay đổi hoặc chậm trễ<br />変更や遅延がある場合、主体的に報告・連絡している</td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                        <td><select class="score-select"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></td>
+                        <td><input type="text" class="text-input" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <br />
+
+            <h3>Đề xuất cải tiến / 改善提案</h3>
+            <textarea class="proposal-textarea"></textarea>
+
+            <div class="submit-wrap">
+                <button type="submit" class="submit-btn">Gửi đánh giá</button>
+            </div>
+        </div>
+    </form>
+</div>

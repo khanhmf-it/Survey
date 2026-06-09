@@ -1,0 +1,7 @@
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\SURVEY.exe
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\SURVEY.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\SURVEY.deps.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\SURVEY.runtimeconfig.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\PubTmp\Out\SURVEY.pdb

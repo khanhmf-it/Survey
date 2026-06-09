@@ -1,0 +1,252 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\khanhmf\\SURVEY\\SURVEY\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BA6BA5-8645-430F-907E-9428B4B9BB91}|SURVEY\\SURVEY.csproj|c:\\khanhmf\\survey\\survey\\survey\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7BA6BA5-8645-430F-907E-9428B4B9BB91}|SURVEY\\SURVEY.csproj|solutionrelative:survey\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BA6BA5-8645-430F-907E-9428B4B9BB91}|SURVEY\\SURVEY.csproj|c:\\khanhmf\\survey\\survey\\survey\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7BA6BA5-8645-430F-907E-9428B4B9BB91}|SURVEY\\SURVEY.csproj|solutionrelative:survey\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|c:\\khanhmf\\survey\\survey\\survey.service\\services\\implementations\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|solutionrelative:survey.service\\services\\implementations\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|c:\\khanhmf\\survey\\survey\\survey.service\\configs\\automapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|solutionrelative:survey.service\\configs\\automapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|c:\\khanhmf\\survey\\survey\\survey.service\\configs\\dependencyinjection\\dependencyinjectionservicesextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|solutionrelative:survey.service\\configs\\dependencyinjection\\dependencyinjectionservicesextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD626329-ED97-42D7-AA36-596C97C50939}|SURVEY.Data\\SURVEY.Data.csproj|c:\\khanhmf\\survey\\survey\\survey.data\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD626329-ED97-42D7-AA36-596C97C50939}|SURVEY.Data\\SURVEY.Data.csproj|solutionrelative:survey.data\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD626329-ED97-42D7-AA36-596C97C50939}|SURVEY.Data\\SURVEY.Data.csproj|c:\\khanhmf\\survey\\survey\\survey.data\\repositories\\implementations\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD626329-ED97-42D7-AA36-596C97C50939}|SURVEY.Data\\SURVEY.Data.csproj|solutionrelative:survey.data\\repositories\\implementations\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|c:\\khanhmf\\survey\\survey\\survey.service\\services\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FCE4AD-E59E-4D8F-AAEF-554F3CD5986A}|SURVEY.Service\\SURVEY.Service.csproj|solutionrelative:survey.service\\services\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 925,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SURVEY\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SURVEY\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-09T06:36:42.796Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SURVEY\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SURVEY\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T06:36:30.446Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Services\\Implementations\\BaseService.cs",
+              "RelativeDocumentMoniker": "SURVEY.Service\\Services\\Implementations\\BaseService.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Services\\Implementations\\BaseService.cs",
+              "RelativeToolTip": "SURVEY.Service\\Services\\Implementations\\BaseService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:02:20.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBaseService.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Services\\Interfaces\\IBaseService.cs",
+              "RelativeDocumentMoniker": "SURVEY.Service\\Services\\Interfaces\\IBaseService.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Services\\Interfaces\\IBaseService.cs",
+              "RelativeToolTip": "SURVEY.Service\\Services\\Interfaces\\IBaseService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:03:13.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\Repositories\\Implementations\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "SURVEY.Data\\Repositories\\Implementations\\BaseRepository.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\Repositories\\Implementations\\BaseRepository.cs",
+              "RelativeToolTip": "SURVEY.Data\\Repositories\\Implementations\\BaseRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwDUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:24:32.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "SURVEY.Data\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Data\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "RelativeToolTip": "SURVEY.Data\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:24:57.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjectionServicesExtention.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Configs\\DependencyInjection\\DependencyInjectionServicesExtention.cs",
+              "RelativeDocumentMoniker": "SURVEY.Service\\Configs\\DependencyInjection\\DependencyInjectionServicesExtention.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Configs\\DependencyInjection\\DependencyInjectionServicesExtention.cs",
+              "RelativeToolTip": "SURVEY.Service\\Configs\\DependencyInjection\\DependencyInjectionServicesExtention.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:38:27.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Configs\\AutoMapper\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "SURVEY.Service\\Configs\\AutoMapper\\MappingProfile.cs",
+              "ToolTip": "C:\\khanhmf\\SURVEY\\SURVEY\\SURVEY.Service\\Configs\\AutoMapper\\MappingProfile.cs",
+              "RelativeToolTip": "SURVEY.Service\\Configs\\AutoMapper\\MappingProfile.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:38:29.855Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 243,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 582,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 363,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
