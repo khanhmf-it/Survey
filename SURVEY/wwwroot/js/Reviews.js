@@ -339,7 +339,7 @@
             <div><strong>Phòng ban:</strong> ${escapeHtml(item.department)}</div>
             <div><strong>Ngày đánh giá:</strong> ${formatDate(item.created_at)}</div>
             <hr/>
-            <div><strong>Đề xuất cải tiến:</strong><br/>${escapeHtml(item.improvement_proposal)}</div>
+            <div><strong>Nhận xét:</strong><br/>${escapeHtml(item.improvement_proposal)}</div>
             <div style="margin-top: 8px;"><strong>Điểm trung bình:</strong> ${formatScore(item.total_score)}</div>
         `;
         refs.detailModal.style.display = "block";

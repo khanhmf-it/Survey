@@ -1,5 +1,18 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".survey-page form");
+    const localizedNode = document.getElementById("index-localized-text");
+    const t = {
+        submitSuccessTitle: localizedNode?.dataset.submitSuccessTitle || "Success",
+        submitSuccessMessage: localizedNode?.dataset.submitSuccessMessage || "Submit successful.",
+        submitFailedTitle: localizedNode?.dataset.submitFailedTitle || "Failed",
+        submitFailedMessage: localizedNode?.dataset.submitFailedMessage || "Submit failed.",
+        submitFailedFallback: localizedNode?.dataset.submitFailedFallback || "An error occurred while submitting.",
+        modalCloseButton: localizedNode?.dataset.modalCloseButton || "Close",
+        mergeGoodSituationLabel: localizedNode?.dataset.mergeGoodSituationLabel || "Good point",
+        mergeImproveSituationLabel: localizedNode?.dataset.mergeImproveSituationLabel || "Need improve",
+        mergeGoodProposalLabel: localizedNode?.dataset.mergeGoodProposalLabel || "Keep doing",
+        mergeImproveProposalLabel: localizedNode?.dataset.mergeImproveProposalLabel || "Improvement proposal"
+    };
 
     if (!form) {
         return;
@@ -47,21 +60,21 @@
 
             if (!response.ok) {
                 const errorText = await response.text();
-                throw new Error(errorText || "Submit failed.");
+                throw new Error(errorText || t.submitFailedMessage);
             }
 
             showResultModal({
                 success: true,
-                title: "Thành công",
-                message: "Gửi đánh giá thành công."
+                title: t.submitSuccessTitle,
+                message: t.submitSuccessMessage
             });
 
             form.reset();
         } catch (error) {
             showResultModal({
                 success: false,
-                title: "Thất bại",
-                message: error?.message || "Có lỗi xảy ra khi gửi đánh giá."
+                title: t.submitFailedTitle,
+                message: error?.message || t.submitFailedFallback
             });
         } finally {
             isSubmitting = false;
@@ -147,15 +160,15 @@
 
     function mergeSituations(goodSituation, improveSituation) {
         const sections = [];
-        if (goodSituation) sections.push("Điểm tốt: " + goodSituation);
-        if (improveSituation) sections.push("Điểm cần cải thiện: " + improveSituation);
+        if (goodSituation) sections.push(`${t.mergeGoodSituationLabel}: ${goodSituation}`);
+        if (improveSituation) sections.push(`${t.mergeImproveSituationLabel}: ${improveSituation}`);
         return sections.length > 0 ? sections.join("\n") : null;
     }
 
     function mergeProposals(goodProposal, improveProposal) {
         const sections = [];
-        if (goodProposal) sections.push("Đề xuất phát huy: " + goodProposal);
-        if (improveProposal) sections.push("Đề xuất cải thiện: " + improveProposal);
+        if (goodProposal) sections.push(`${t.mergeGoodProposalLabel}: ${goodProposal}`);
+        if (improveProposal) sections.push(`${t.mergeImproveProposalLabel}: ${improveProposal}`);
         return sections.length > 0 ? sections.join("\n") : null;
     }
 
@@ -201,7 +214,7 @@
 
             const button = document.createElement("button");
             button.type = "button";
-            button.textContent = "Đóng";
+            button.textContent = t.modalCloseButton;
             button.style.border = "none";
             button.style.padding = "10px 18px";
             button.style.borderRadius = "8px";

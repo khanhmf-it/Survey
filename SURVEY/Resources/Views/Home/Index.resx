@@ -247,7 +247,7 @@
     <value>期待を満たしていない</value>
   </data>
   <data name="EmployeeIdLabel" xml:space="preserve">
-    <value>👤 Mã nhân viên</value>
+    <value>👤 Người được nhận xét ( mã nhân viên)</value>
   </data>
   <data name="EmployeeIdPlaceholder" xml:space="preserve">
     <value>VD: F0000001</value>
@@ -410,5 +410,92 @@
   </data>
   <data name="SubmitButton" xml:space="preserve">
     <value>✓ Gửi đánh giá</value>
+  </data>
+  <data name="ScoreGuideToggleLabel" xml:space="preserve">
+    <value>📘 Xem chi tiết thang điểm</value>
+  </data>
+  <data name="ScoreGuideHeading" xml:space="preserve">
+    <value>Thang điểm</value>
+  </data>
+  <data name="ScoreGuideParagraph1" xml:space="preserve">
+    <value>Thang điểm được sử dụng như một công cụ tham khảo nhằm hỗ trợ tổng hợp xu hướng đánh giá.</value>
+  </data>
+  <data name="ScoreGuideParagraph2" xml:space="preserve">
+    <value>Việc thảo luận và phản hồi trong các buổi 1-1 sẽ tập trung chủ yếu vào nội dung nhận xét, ví dụ cụ thể và các đề xuất cải thiện, không chỉ dựa trên điểm số.</value>
+  </data>
+  <data name="ScoreTableColScore" xml:space="preserve">
+    <value>Điểm</value>
+  </data>
+  <data name="ScoreTableColLevel" xml:space="preserve">
+    <value>Mức đánh giá</value>
+  </data>
+  <data name="ScoreTableColDescription" xml:space="preserve">
+    <value>Giải thích</value>
+  </data>
+  <data name="Score5Level" xml:space="preserve">
+    <value>Rất tốt (Very Good)</value>
+  </data>
+  <data name="Score4Level" xml:space="preserve">
+    <value>Tốt (Good)</value>
+  </data>
+  <data name="Score3Level" xml:space="preserve">
+    <value>Bình thường (Normal)</value>
+  </data>
+  <data name="Score2Level" xml:space="preserve">
+    <value>Cần cải thiện (Need improve)</value>
+  </data>
+  <data name="Score1Level" xml:space="preserve">
+    <value>Cần cải thiện nhiều (Need improve much)</value>
+  </data>
+  <data name="Score5FullText" xml:space="preserve">
+    <value>Luôn thực hiện tốt, chủ động hỗ trợ người khác, phối hợp hiệu quả và tạo ảnh hưởng tích cực rõ ràng.</value>
+  </data>
+  <data name="Score4FullText" xml:space="preserve">
+    <value>Thực hiện tốt trong hầu hết các trường hợp, hợp tác và hỗ trợ đầy đủ.</value>
+  </data>
+  <data name="Score3FullText" xml:space="preserve">
+    <value>Hoàn thành công việc ở mức cơ bản, thi thoảng còn thiếu chủ động hoặc chưa ổn định.</value>
+  </data>
+  <data name="Score2FullText" xml:space="preserve">
+    <value>Chưa đáp ứng tốt ở một số khía cạnh, cần cải thiện về hợp tác, giao tiếp hoặc trách nhiệm.</value>
+  </data>
+  <data name="Score1FullText" xml:space="preserve">
+    <value>Chưa đáp ứng, cần cải thiện nhiều.</value>
+  </data>
+  <data name="ActionSectionTitle" xml:space="preserve">
+    <value>Nhận xét</value>
+  </data>
+  <data name="ActionSectionPlaceholder" xml:space="preserve">
+    <value>Nhận xét của bạn (nếu có)...</value>
+  </data>
+  <data name="SubmitSuccessTitle" xml:space="preserve">
+    <value>Thành công</value>
+  </data>
+  <data name="SubmitSuccessMessage" xml:space="preserve">
+    <value>Gửi đánh giá thành công.</value>
+  </data>
+  <data name="SubmitFailedTitle" xml:space="preserve">
+    <value>Thất bại</value>
+  </data>
+  <data name="SubmitFailedMessage" xml:space="preserve">
+    <value>Gửi đánh giá thất bại.</value>
+  </data>
+  <data name="SubmitFailedFallback" xml:space="preserve">
+    <value>Có lỗi xảy ra khi gửi đánh giá.</value>
+  </data>
+  <data name="ModalCloseButton" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="MergeGoodSituationLabel" xml:space="preserve">
+    <value>Điểm tốt</value>
+  </data>
+  <data name="MergeImproveSituationLabel" xml:space="preserve">
+    <value>Điểm cần cải thiện</value>
+  </data>
+  <data name="MergeGoodProposalLabel" xml:space="preserve">
+    <value>Đề xuất phát huy</value>
+  </data>
+  <data name="MergeImproveProposalLabel" xml:space="preserve">
+    <value>Đề xuất cải thiện</value>
   </data>
 </root>

@@ -247,7 +247,7 @@
     <value>期待を満たしていない</value>
   </data>
   <data name="EmployeeIdLabel" xml:space="preserve">
-    <value>👤 社員コード</value>
+    <value>👤 審査対象者（従業員コード）</value>
   </data>
   <data name="EmployeeIdPlaceholder" xml:space="preserve">
     <value>例: F0000001</value>
@@ -410,5 +410,92 @@
   </data>
   <data name="SubmitButton" xml:space="preserve">
     <value>✓ 評価を送信</value>
+  </data>
+  <data name="ScoreGuideToggleLabel" xml:space="preserve">
+    <value>📘 評価スケールの詳細を見る</value>
+  </data>
+  <data name="ScoreGuideHeading" xml:space="preserve">
+    <value>評価スケール</value>
+  </data>
+  <data name="ScoreGuideParagraph1" xml:space="preserve">
+    <value>このスコアは評価傾向を把握するための参考指標として使用します。</value>
+  </data>
+  <data name="ScoreGuideParagraph2" xml:space="preserve">
+    <value>1on1での対話では点数だけでなく、コメント内容、具体例、改善提案を重視します。</value>
+  </data>
+  <data name="ScoreTableColScore" xml:space="preserve">
+    <value>点数</value>
+  </data>
+  <data name="ScoreTableColLevel" xml:space="preserve">
+    <value>評価レベル</value>
+  </data>
+  <data name="ScoreTableColDescription" xml:space="preserve">
+    <value>説明</value>
+  </data>
+  <data name="Score5Level" xml:space="preserve">
+    <value>非常に良い (Very Good)</value>
+  </data>
+  <data name="Score4Level" xml:space="preserve">
+    <value>良い (Good)</value>
+  </data>
+  <data name="Score3Level" xml:space="preserve">
+    <value>普通 (Normal)</value>
+  </data>
+  <data name="Score2Level" xml:space="preserve">
+    <value>改善が必要 (Need improve)</value>
+  </data>
+  <data name="Score1Level" xml:space="preserve">
+    <value>大幅な改善が必要 (Need improve much)</value>
+  </data>
+  <data name="Score5FullText" xml:space="preserve">
+    <value>常に高い水準で行動し、主体的に周囲を支援し、明確に良い影響を与えている。</value>
+  </data>
+  <data name="Score4FullText" xml:space="preserve">
+    <value>ほとんどの場面で良好に実行し、協力と支援が十分にできている。</value>
+  </data>
+  <data name="Score3FullText" xml:space="preserve">
+    <value>基本的な業務は遂行できるが、主体性や安定性にばらつきがある。</value>
+  </data>
+  <data name="Score2FullText" xml:space="preserve">
+    <value>一部の観点で期待水準に届いておらず、協力・コミュニケーション・責任感の改善が必要。</value>
+  </data>
+  <data name="Score1FullText" xml:space="preserve">
+    <value>期待水準を満たしておらず、大きな改善が必要。</value>
+  </data>
+  <data name="ActionSectionTitle" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="ActionSectionPlaceholder" xml:space="preserve">
+    <value>コメントがあれば入力してください...</value>
+  </data>
+  <data name="SubmitSuccessTitle" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="SubmitSuccessMessage" xml:space="preserve">
+    <value>評価の送信に成功しました。</value>
+  </data>
+  <data name="SubmitFailedTitle" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="SubmitFailedMessage" xml:space="preserve">
+    <value>評価の送信に失敗しました。</value>
+  </data>
+  <data name="SubmitFailedFallback" xml:space="preserve">
+    <value>送信中にエラーが発生しました。</value>
+  </data>
+  <data name="ModalCloseButton" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="MergeGoodSituationLabel" xml:space="preserve">
+    <value>良い点</value>
+  </data>
+  <data name="MergeImproveSituationLabel" xml:space="preserve">
+    <value>改善点</value>
+  </data>
+  <data name="MergeGoodProposalLabel" xml:space="preserve">
+    <value>継続提案</value>
+  </data>
+  <data name="MergeImproveProposalLabel" xml:space="preserve">
+    <value>改善提案</value>
   </data>
 </root>

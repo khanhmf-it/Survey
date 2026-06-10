@@ -2,19 +2,30 @@
 @{
     ViewData["Title"] = Localizer["Title"];
 }
-<head>
-    <link rel="stylesheet" href="~/css/Index.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+
+<link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
 
 <div class="survey-page">
+    <div id="index-localized-text"
+         data-submit-success-title="@Localizer["SubmitSuccessTitle"]"
+         data-submit-success-message="@Localizer["SubmitSuccessMessage"]"
+         data-submit-failed-title="@Localizer["SubmitFailedTitle"]"
+         data-submit-failed-message="@Localizer["SubmitFailedMessage"]"
+         data-submit-failed-fallback="@Localizer["SubmitFailedFallback"]"
+         data-modal-close-button="@Localizer["ModalCloseButton"]"
+         data-merge-good-situation-label="@Localizer["MergeGoodSituationLabel"]"
+         data-merge-improve-situation-label="@Localizer["MergeImproveSituationLabel"]"
+         data-merge-good-proposal-label="@Localizer["MergeGoodProposalLabel"]"
+         data-merge-improve-proposal-label="@Localizer["MergeImproveProposalLabel"]">
+    </div>
+
     <form method="post">
         <div class="unified-section">
 
             <!-- PHẦN 1: MỤC ĐÍCH -->
             <div class="purpose-hero">
                 <div class="hero-badge">@Localizer["HeroBadge"]</div>
-                <details class="guide-toggle" close>
+                <details class="guide-toggle">
                     <summary>@Localizer["GuideToggleLabel"]</summary>
                     <div class="hero-desc">
                         <h6 class="highlight">@Localizer["PurposeSectionTitle"]</h6>
@@ -53,6 +64,54 @@
             <!-- PHẦN 2: THANG ĐIỂM -->
             <div class="score-legend">
                 <h3>@Localizer["ScoreLegendTitle"]</h3>
+                <details class="guide-toggle score-guide">
+                    <summary>@Localizer["ScoreGuideToggleLabel"]</summary>
+                    <div class="guide-panel">
+                        <h6 class="highlight">@Localizer["ScoreGuideHeading"]</h6>
+                        <p>@Localizer["ScoreGuideParagraph1"]</p>
+                        <p>@Localizer["ScoreGuideParagraph2"]</p>
+
+                        <div class="legend-table-wrap">
+                            <table class="legend-table">
+                                <thead>
+                                    <tr>
+                                        <th>@Localizer["ScoreTableColScore"]</th>
+                                        <th>@Localizer["ScoreTableColLevel"]</th>
+                                        <th>@Localizer["ScoreTableColDescription"]</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>@Localizer["Score5Level"]</td>
+                                        <td>@Localizer["Score5FullText"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>@Localizer["Score4Level"]</td>
+                                        <td>@Localizer["Score4FullText"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>@Localizer["Score3Level"]</td>
+                                        <td>@Localizer["Score3FullText"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>@Localizer["Score2Level"]</td>
+                                        <td>@Localizer["Score2FullText"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>@Localizer["Score1Level"]</td>
+                                        <td>@Localizer["Score1FullText"]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
                 <div class="legend-grid">
                     <div class="legend-item"><span class="score-badge">5</span><strong>@Localizer["Score5Title"]</strong><span class="vi-desc">@Localizer["Score5Desc"]</span></div>
                     <div class="legend-item"><span class="score-badge">4</span><strong>@Localizer["Score4Title"]</strong><span class="vi-desc">@Localizer["Score4Desc"]</span></div>
@@ -145,7 +204,8 @@
                         <div class="field"><label>@Localizer["StrengthLabel"]</label><textarea placeholder="@Localizer["Group3StrengthPlaceholder"]" class="text-input" rows="2"></textarea></div>
                         <div class="field"><label>@Localizer["ScoreLabel"]</label><select class="score-select"><option>@Localizer["DefaultOption"]</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
                         <div class="field"><label>@Localizer["SituationLabel"]</label><textarea placeholder="@Localizer["Group3SituationPlaceholder"]" class="text-input" rows="2"></textarea></div>
-                        <div class="field"><label>@Localizer["ProposalTitle"]</label><textarea placeholder="@Localizer["ProposalPlaceholder"]" class="text-input" rows="2"></textarea></div>
+                        <div class="field"><label>@Localizer["ProposalTitle"]</label><textarea placeholder="@Localizer["ProposalPlaceholder"]" class="text-input" rows="2"></textarea>
+                        </div>
                     </div>
                     <div class="evaluation-fields">
                         <div class="field"><label>@Localizer["ImproveLabel"]</label><textarea placeholder="@Localizer["Group3ImprovePlaceholder"]" class="text-input" rows="2"></textarea></div>
@@ -208,10 +268,10 @@
 
             <!-- PHẦN 5: ĐỀ XUẤT & GỬI -->
             <div class="action-section">
-@*                 <div class="proposal-box">
-                    <h3>@Localizer["ProposalTitle"]</h3>
-                    <textarea placeholder="@Localizer["ProposalPlaceholder"]" class="proposal-textarea"></textarea>
-                </div> *@
+                <div class="proposal-box">
+                    <h3>@Localizer["ActionSectionTitle"]</h3>
+                    <textarea placeholder="@Localizer["ActionSectionPlaceholder"]" class="proposal-textarea"></textarea>
+                </div>
 
                 <div class="submit-wrap">
                     <button type="submit" class="submit-btn">@Localizer["SubmitButton"]</button>
