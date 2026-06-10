@@ -11,28 +11,52 @@
     <form method="post">
         <div class="unified-section">
 
-            <!-- PHẦN 1: MỤC ĐÍCH - Dạng Hero -->
+            <!-- PHẦN 1: MỤC ĐÍCH -->
             <div class="purpose-hero">
                 <div class="hero-badge">@Localizer["HeroBadge"]</div>
-                <h1><span class="highlight">@Localizer["HeroTitle"]</span></h1>
+@*                 <h1><span class="highlight">@Localizer["HeroTitle"]</span></h1> *@
                 <div class="hero-desc">
+                    <h6 class="highlight">■Mục đích điều tra </h6>
                     <p>@Localizer["HeroDescription"]</p>
-                    <p class="jp-text">@Localizer["HeroSubDescription"]</p>
+                    <p>Kết quả khảo sát là cơ sở để thực hiện trao đổi 1-1 và đề xuất các biện pháp cải thiện, hướng tới xây dựng môi trường làm việc tích cực, hiệu quả và hợp tác.</p>
+                    <p>Khảo sát này phục vụ mục đích nâng cao và phát triển cá nhân, không sử dụng cho việc đánh giá nhân sự hàng năm.</p>
+
+                    <h6 class="highlight">■Hướng dẫn đánh giá </h6>
+                    <p>Đánh giá dựa trên sự việc cụ thể: Vui lòng đưa ra nhận xét dựa trên các tình huống, hành động thực tế đã quan sát được trong công việc, thay vì cảm nhận hoặc ấn tượng cá nhân.</p>
+                    <p>Giữ tính khách quan và công bằng: Tránh các thiên vị cá nhân, và đánh giá một cách cân bằng trên nhiều khía cạnh, không chỉ dựa vào một sự việc đơn lẻ.</p>
+                    <p>Không phụ thuộc vào ấn tượng gần đây: Hãy xem xét toàn bộ quá trình làm việc trong một khoảng thời gian hợp lý, thay vì chỉ dựa trên những trải nghiệm gần nhất.</p>
+                    <p>Ưu tiên phản hồi mang tính xây dựng: Khuyến khích nêu rõ ví dụ cụ thể  và đề xuất điểm có thể cải thiện, nhằm hỗ trợ sự phát triển cá nhân và nâng cao hiệu quả làm việc.</p>
+
+                    <h6 class="highlight">■Nguyên tắc thực hiện </h6>
+                    <p>Ý kiến cần được đưa ra một cách khách quan, trung thực và mang tính xây dựng.</p>
+                    <p>Ghi nhận điểm mạnh và những điểm có thể cải thiện.</p>
+                    <p>Cung cấp ví dụ, tình huống cụ thể để tăng tính rõ ràng và hữu ích của nhận xét.</p>
+
+                    <h6 class="highlight">■Đối tượng thực hiện </h6>
+                    <p>Thành viên cùng nhóm: thực hiện đánh giá lẫn nhau, bao gồm cả quản lý sơ cấp.</p>
+                    <p>Thành viên khác nhóm: khuyến khích đánh giá những cá nhân đã từng phối hợp công việc.</p>
+                    <p>Quản lý sơ cấp: thực hiện đánh giá toàn bộ thành viên trong nhóm phụ trách và quản lý sơ cấp khác.</p>
+
+                    <h6 class="highlight">■Hình thức thực hiện  </h6>
+                    <p>Khảo sát được thực hiện trên giấy, ẩn danh nhằm đảm bảo tính khách quan.</p>
+                    <p>Kết quả sẽ được tổng hợp bởi quản lý trung cấp và sử dụng cho các buổi trao đổi 1-1.</p>
+                    <p>Việc khảo sát được thực hiện định kỳ tùy theo nhu cầu cải thiện của phòng.</p>
+
                     <div class="result-note">
                         <span>@Localizer["ResultNote"]</span>
                     </div>
                 </div>
             </div>
 
-            <!-- PHẦN 2: THANG ĐIỂM - Dạng tham chiếu nhanh -->
+            <!-- PHẦN 2: THANG ĐIỂM -->
             <div class="score-legend">
                 <h3>@Localizer["ScoreLegendTitle"]</h3>
                 <div class="legend-grid">
-                    <div class="legend-item"><span class="score-badge">5</span><strong>@Localizer["Score5Title"]</strong><span class="vi-desc">@Localizer["Score5Desc"]</span><span class="jp-desc">@Localizer["Score5JpDesc"]</span></div>
-                    <div class="legend-item"><span class="score-badge">4</span><strong>@Localizer["Score4Title"]</strong><span class="vi-desc">@Localizer["Score4Desc"]</span><span class="jp-desc">@Localizer["Score4JpDesc"]</span></div>
-                    <div class="legend-item"><span class="score-badge">3</span><strong>@Localizer["Score3Title"]</strong><span class="vi-desc">@Localizer["Score3Desc"]</span><span class="jp-desc">@Localizer["Score3JpDesc"]</span></div>
-                    <div class="legend-item"><span class="score-badge">2</span><strong>@Localizer["Score2Title"]</strong><span class="vi-desc">@Localizer["Score2Desc"]</span><span class="jp-desc">@Localizer["Score2JpDesc"]</span></div>
-                    <div class="legend-item"><span class="score-badge">1</span><strong>@Localizer["Score1Title"]</strong><span class="vi-desc">@Localizer["Score1Desc"]</span><span class="jp-desc">@Localizer["Score1JpDesc"]</span></div>
+                    <div class="legend-item"><span class="score-badge">5</span><strong>@Localizer["Score5Title"]</strong><span class="vi-desc">@Localizer["Score5Desc"]</span></div>
+                    <div class="legend-item"><span class="score-badge">4</span><strong>@Localizer["Score4Title"]</strong><span class="vi-desc">@Localizer["Score4Desc"]</span></div>
+                    <div class="legend-item"><span class="score-badge">3</span><strong>@Localizer["Score3Title"]</strong><span class="vi-desc">@Localizer["Score3Desc"]</span></div>
+                    <div class="legend-item"><span class="score-badge">2</span><strong>@Localizer["Score2Title"]</strong><span class="vi-desc">@Localizer["Score2Desc"]</span></div>
+                    <div class="legend-item"><span class="score-badge">1</span><strong>@Localizer["Score1Title"]</strong><span class="vi-desc">@Localizer["Score1Desc"]</span></div>
                 </div>
             </div>
 
@@ -60,7 +84,6 @@
                         <div class="group-num">01</div>
                         <div class="group-name">
                             <h4>@Localizer["Group1Title"]</h4>
-                            <span>@Localizer["Group1SubTitle"]</span>
                         </div>
                     </div>
                     <div class="card-criteria">
@@ -81,7 +104,6 @@
                         <div class="group-num">02</div>
                         <div class="group-name">
                             <h4>@Localizer["Group2Title"]</h4>
-                            <span>@Localizer["Group2SubTitle"]</span>
                         </div>
                     </div>
                     <div class="card-criteria">
@@ -102,7 +124,6 @@
                         <div class="group-num">03</div>
                         <div class="group-name">
                             <h4>@Localizer["Group3Title"]</h4>
-                            <span>@Localizer["Group3SubTitle"]</span>
                         </div>
                     </div>
                     <div class="card-criteria">
@@ -123,7 +144,6 @@
                         <div class="group-num">04</div>
                         <div class="group-name">
                             <h4>@Localizer["Group4Title"]</h4>
-                            <span>@Localizer["Group4SubTitle"]</span>
                         </div>
                     </div>
                     <div class="card-criteria">
@@ -144,7 +164,6 @@
                         <div class="group-num">05</div>
                         <div class="group-name">
                             <h4>@Localizer["Group5Title"]</h4>
-                            <span>@Localizer["Group5SubTitle"]</span>
                         </div>
                     </div>
                     <div class="card-criteria">
@@ -165,7 +184,6 @@
                 <div class="proposal-box">
                     <h3>@Localizer["ProposalTitle"]</h3>
                     <textarea placeholder="@Localizer["ProposalPlaceholder"]" class="proposal-textarea"></textarea>
-                    <div class="jp-hint">@Localizer["ProposalHint"]</div>
                 </div>
 
                 <div class="submit-wrap">

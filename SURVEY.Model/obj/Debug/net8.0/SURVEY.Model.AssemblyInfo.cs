@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SURVEY.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29bec58aa85a7380dc7b377f70dd255fe63e8c43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86071b3a56371e1071d614a63f2d98c49521ff4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SURVEY.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SURVEY.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

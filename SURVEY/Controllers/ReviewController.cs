@@ -62,7 +62,7 @@ namespace SURVEY.Controllers
                 var templatePath = System.IO.Path.Combine(root, "template", "TemplateQuotationResults.xlsx");
                 if (!System.IO.File.Exists(templatePath))
                 {
-                    return BadRequest("Không tìm thấy file template: TemplateQuotationResults.xlsx");
+                    return BadRequest("Không tìm thấy file template: TemplateSurvey 360.xlsx");
                 }
 
                 using var fs = System.IO.File.OpenRead(templatePath);
@@ -72,14 +72,14 @@ namespace SURVEY.Controllers
                 {
                     return BadRequest("Không tìm thấy worksheet trong template");
                 }
-                int rowStart = 4;
+                int rowStart = 60;
                 foreach (var item in reviews.Data)
                 {
                     int col = 1;
-                    ws.Cell(rowStart, col++).SetValue(rowStart - 3);
-                    ws.Cell(rowStart, col++).SetValue(item.employee_code ?? string.Empty);
-                    ws.Cell(rowStart, col++).SetValue(item.employee_name ?? string.Empty);
+                    //ws.Cell(rowStart, col++).SetValue(rowStart - 3);
                     ws.Cell(rowStart, col++).SetValue(item.department ?? string.Empty);
+                    ws.Cell(rowStart, col++).SetValue(item.employee_code ?? string.Empty);
+                    //ws.Cell(rowStart, col++).SetValue(item.employee_name ?? string.Empty);
 
                     ws.Cell(rowStart, col++).SetValue(item.g1_good_point ?? string.Empty);
                     ws.Cell(rowStart, col++).SetValue(item.g1_good_score ?? 0);
@@ -113,7 +113,7 @@ namespace SURVEY.Controllers
                     ws.Cell(rowStart, col++).SetValue(item.g5_example ?? string.Empty);
 
                     ws.Cell(rowStart, col++).SetValue(item.improvement_proposal ?? null);
-                    ws.Cell(rowStart, col++).SetValue(item.created_at ?? null);
+                    //ws.Cell(rowStart, col++).SetValue(item.created_at ?? null);
 
                     rowStart++;
                 }

@@ -70,4 +70,14 @@ public partial class employee_evaluation
     public double? total_score { get; set; }
 
     public DateTime? created_at { get; set; }
+
+    public string? g1_improvement_proposal { get; set; }
+
+    public string? g2_improvement_proposal { get; set; }
+
+    public string? g3_improvement_proposal { get; set; }
+
+    public string? g4_improvement_proposal { get; set; }
+
+    public string? g5_improvement_proposal { get; set; }
 }

@@ -1,20 +1,3 @@
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.deps.json
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.pdb
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.csproj.AssemblyReference.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.GeneratedMSBuildEditorConfig.editorconfig
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.AssemblyInfoInputs.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.AssemblyInfo.cs
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.csproj.CoreCompileInputs.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\refint\SURVEY.Service.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.pdb
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\ref\SURVEY.Service.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.pdb
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.pdb
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.S.1A3408B9.Up2Date
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.deps.json
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.dll
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.pdb
@@ -33,3 +16,21 @@ C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVE
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\refint\SURVEY.Service.dll
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.pdb
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Service\obj\Debug\net8.0\ref\SURVEY.Service.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.deps.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Service.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Model.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\bin\Debug\net8.0\SURVEY.Data.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.csproj.AssemblyReference.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.AssemblyInfoInputs.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.AssemblyInfo.cs
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.csproj.CoreCompileInputs.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.sourcelink.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.S.1A3408B9.Up2Date
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\refint\SURVEY.Service.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\SURVEY.Service.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Service\obj\Debug\net8.0\ref\SURVEY.Service.dll

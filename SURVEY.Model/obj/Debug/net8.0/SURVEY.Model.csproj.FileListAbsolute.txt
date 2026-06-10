@@ -1,17 +1,3 @@
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.deps.json
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.runtimeconfig.json
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.pdb
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.csproj.AssemblyReference.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.GeneratedMSBuildEditorConfig.editorconfig
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.AssemblyInfoInputs.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.AssemblyInfo.cs
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.csproj.CoreCompileInputs.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\refint\SURVEY.Model.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.pdb
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.genruntimeconfig.cache
-C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\ref\SURVEY.Model.dll
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.deps.json
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.runtimeconfig.json
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.dll
@@ -27,3 +13,18 @@ C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\obj\Debug\net8.0\refint\
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.pdb
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.genruntimeconfig.cache
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY.Model\obj\Debug\net8.0\ref\SURVEY.Model.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.deps.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.runtimeconfig.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\bin\Debug\net8.0\SURVEY.Model.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.csproj.AssemblyReference.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.AssemblyInfoInputs.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.AssemblyInfo.cs
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.csproj.CoreCompileInputs.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.sourcelink.json
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\refint\SURVEY.Model.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.pdb
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\SURVEY.Model.genruntimeconfig.cache
+C:\khanhmf\SURVEY\SURVEY\SURVEY.Model\obj\Debug\net8.0\ref\SURVEY.Model.dll

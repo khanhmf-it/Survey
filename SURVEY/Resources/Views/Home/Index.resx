@@ -127,10 +127,10 @@
     <value>Đánh giá năng lực đa chiều</value>
   </data>
   <data name="HeroDescription" xml:space="preserve">
-    <value>Khảo sát nhằm ghi nhận mức độ hợp tác, giao tiếp, hỗ trợ và tinh thần trách nhiệm trong công việc dựa trên đánh giá từ cấp trên, cấp dưới và đồng nghiệp.</value>
+    <value>Khảo sát nhằm ghi nhận mức độ hợp tác, giao tiếp, hỗ trợ và tinh thần trách nhiệm trong công việc dựa trên đánh giá đa chiều từ cấp trên, cấp dưới và đồng nghiệp cùng/khác nhóm</value>
   </data>
   <data name="HeroSubDescription" xml:space="preserve">
-    <value>調査は、上司・部下・同僚からの多角的な評価に基づき、協力、コミュニケーション、サポート、責任感を記録することを目的としています。</value>
+    <value>Mục tiêu của cuộc khảo sát là ghi nhận sự hợp tác, giao tiếp, hỗ trợ và tinh thần trách nhiệm dựa trên những đánh giá đa chiều từ cấp trên, cấp dưới và đồng nghiệp.</value>
   </data>
   <data name="ResultNote" xml:space="preserve">
     <value>✨ Kết quả là cơ sở để trao đổi 1-1 và cải thiện môi trường làm việc tích cực</value>
