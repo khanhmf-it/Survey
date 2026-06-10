@@ -50,7 +50,7 @@
             }
 
             const payload = buildPayload();
-            const response = await fetch("/Home/AddEvaluation", {
+            const response = await fetch("/Home/SendMailSectionManager", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -85,7 +85,7 @@
     });
 
     function buildPayload() {
-        const employeeCode = (document.getElementById("employee_id")?.value || "").trim();
+        const employeeName = (document.getElementById("employee_name")?.value || "").trim();
         const department = (document.getElementById("employee_group")?.value || "").trim();
 
         const groups = Array.from(document.querySelectorAll(".evaluation-groups .group-card"));
@@ -120,38 +120,49 @@
             : null;
 
         return {
-            employee_code: employeeCode || null,
+            employee_code: null,
+            employee_name: employeeName || null,
             department: department || null,
             g1_good_point: groupValues[0]?.goodPoint || null,
             g1_good_score: groupValues[0]?.goodScore ?? null,
             g1_improve_point: groupValues[0]?.improvePoint || null,
             g1_improve_score: groupValues[0]?.improveScore ?? null,
-            g1_example: mergeSituations(groupValues[0]?.goodSituation, groupValues[0]?.improveSituation),
-            g1_improvement_proposal: mergeProposals(groupValues[0]?.goodProposal, groupValues[0]?.improveProposal),
+            g1_example_good: groupValues[0]?.goodSituation ?? null,
+            g1_example_improve:  groupValues[0]?.improveSituation ?? null,
+            g1_improvement_proposal_good:  groupValues[0]?.goodProposal,
+            g1_improvement_proposal_improve: groupValues[0]?.improveProposal,
             g2_good_point: groupValues[1]?.goodPoint || null,
             g2_good_score: groupValues[1]?.goodScore ?? null,
             g2_improve_point: groupValues[1]?.improvePoint || null,
             g2_improve_score: groupValues[1]?.improveScore ?? null,
-            g2_example: mergeSituations(groupValues[1]?.goodSituation, groupValues[1]?.improveSituation),
-            g2_improvement_proposal: mergeProposals(groupValues[1]?.goodProposal, groupValues[1]?.improveProposal),
+            g2_example_good: groupValues[1]?.goodSituation ?? null,
+            g2_example_improve: groupValues[1]?.improveSituation ?? null,
+            g2_improvement_proposal_good:  groupValues[1]?.goodProposal,
+            g2_improvement_proposal_improve: groupValues[1]?.improveProposal,
             g3_good_point: groupValues[2]?.goodPoint || null,
             g3_good_score: groupValues[2]?.goodScore ?? null,
             g3_improve_point: groupValues[2]?.improvePoint || null,
             g3_improve_score: groupValues[2]?.improveScore ?? null,
-            g3_example: mergeSituations(groupValues[2]?.goodSituation, groupValues[2]?.improveSituation),
-            g3_improvement_proposal: mergeProposals(groupValues[2]?.goodProposal, groupValues[2]?.improveProposal),
+            g3_example_good: groupValues[2]?.goodSituation ?? null,
+            g3_example_improve: groupValues[2]?.improveSituation ?? null,
+            g3_improvement_proposal_good:  groupValues[2]?.goodProposal,
+            g3_improvement_proposal_improve: groupValues[2]?.improveProposal,
             g4_good_point: groupValues[3]?.goodPoint || null,
             g4_good_score: groupValues[3]?.goodScore ?? null,
             g4_improve_point: groupValues[3]?.improvePoint || null,
             g4_improve_score: groupValues[3]?.improveScore ?? null,
-            g4_example: mergeSituations(groupValues[3]?.goodSituation, groupValues[3]?.improveSituation),
-            g4_improvement_proposal: mergeProposals(groupValues[3]?.goodProposal, groupValues[3]?.improveProposal),
+            g4_example_good: groupValues[3]?.goodSituation ?? null,
+            g4_example_improve: groupValues[3]?.improveSituation ?? null,
+            g4_improvement_proposal_good:  groupValues[3]?.goodProposal,
+            g4_improvement_proposal_improve: groupValues[3]?.improveProposal,
             g5_good_point: groupValues[4]?.goodPoint || null,
             g5_good_score: groupValues[4]?.goodScore ?? null,
             g5_improve_point: groupValues[4]?.improvePoint || null,
             g5_improve_score: groupValues[4]?.improveScore ?? null,
-            g5_example: mergeSituations(groupValues[4]?.goodSituation, groupValues[4]?.improveSituation),
-            g5_improvement_proposal: mergeProposals(groupValues[4]?.goodProposal, groupValues[4]?.improveProposal),
+            g5_example_good: groupValues[4]?.goodSituation ?? null,
+            g5_example_improve: groupValues[4]?.improveSituation ?? null,
+            g5_improvement_proposal_good:  groupValues[4]?.goodProposal,
+            g5_improvement_proposal_improve: groupValues[4]?.improveProposal,
             improvement_proposal: proposal || null,
             total_score: totalScore,
             created_at: new Date().toISOString()

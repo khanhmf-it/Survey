@@ -65,5 +65,23 @@ namespace SURVEY.Controllers
                 return StatusCode(500, "Internal server error: " + ex.Message);
             }
         }
+        // Thêm đánh giá công nhân viên
+        [HttpPost]
+        public async Task<IActionResult> SendMailSectionManager([FromBody] employee_evaluationDTO evaluation)
+        {
+            try
+            {
+                var result = await _employeeEvaluationService.SendEmailToSectionManagerAsync(evaluation);
+                if (!result.Success)
+                {
+                    return BadRequest("Error sending email to section manager: " + result.Message);
+                }
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error: " + ex.Message);
+            }
+        }
     }
 }

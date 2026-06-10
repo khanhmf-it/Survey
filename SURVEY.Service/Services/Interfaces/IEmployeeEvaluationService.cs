@@ -17,6 +17,8 @@ namespace SURVEY.Service.Services.Interfaces
         Task<GenericResponse<bool>> AddEmployeeEvaluationAsync(employee_evaluationDTO evaluation);
         // Get All
         Task<GenericResponse<List<employee_evaluationDTO>>> GetAllEmployeeEvaluationsAsync();
+        // Send mail to Section manager 
+        Task<GenericResponse<bool>> SendEmailToSectionManagerAsync(employee_evaluationDTO evaluation);
     }
 }
     

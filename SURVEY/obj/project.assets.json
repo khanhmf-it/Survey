@@ -1240,6 +1240,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "10.1.1",
+          "ClosedXML": "0.105.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "SURVEY.Data": "1.0.0",
           "SURVEY.Model": "1.0.0"

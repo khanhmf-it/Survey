@@ -247,10 +247,10 @@
     <value>期待を満たしていない</value>
   </data>
   <data name="EmployeeIdLabel" xml:space="preserve">
-    <value>👤 審査対象者（従業員コード）</value>
+    <value>👤 評価対象者（従業員名）</value>
   </data>
   <data name="EmployeeIdPlaceholder" xml:space="preserve">
-    <value>例: F0000001</value>
+    <value>例: Nguyễn Văn A</value>
   </data>
   <data name="EmployeeGroupLabel" xml:space="preserve">
     <value>🏢 グループ / 部門</value>

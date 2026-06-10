@@ -247,10 +247,10 @@
     <value>期待を満たしていない</value>
   </data>
   <data name="EmployeeIdLabel" xml:space="preserve">
-    <value>👤 Người được nhận xét ( mã nhân viên)</value>
+    <value>👤 Người được nhận xét ( tên nhân viên)</value>
   </data>
   <data name="EmployeeIdPlaceholder" xml:space="preserve">
-    <value>VD: F0000001</value>
+    <value>VD: Nguyễn Văn A</value>
   </data>
   <data name="EmployeeGroupLabel" xml:space="preserve">
     <value>🏢 Group / Phòng ban</value>

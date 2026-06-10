@@ -26,8 +26,10 @@ namespace SURVEY.Model.DTOs
 
         public int? g1_improve_score { get; set; }
 
-        public string? g1_example { get; set; }
+        public string? g1_example_good { get; set; }
 
+        public string? g1_example_improve { get; set; }
+    
         public string? g2_good_point { get; set; }
 
         public int? g2_good_score { get; set; }
@@ -36,7 +38,9 @@ namespace SURVEY.Model.DTOs
 
         public int? g2_improve_score { get; set; }
 
-        public string? g2_example { get; set; }
+        public string? g2_example_good { get; set; }
+
+        public string? g2_example_improve { get; set; }
 
         public string? g3_good_point { get; set; }
 
@@ -46,7 +50,9 @@ namespace SURVEY.Model.DTOs
 
         public int? g3_improve_score { get; set; }
 
-        public string? g3_example { get; set; }
+        public string? g3_example_good { get; set; }
+
+        public string? g3_example_improve { get; set; }
 
         public string? g4_good_point { get; set; }
 
@@ -56,7 +62,9 @@ namespace SURVEY.Model.DTOs
 
         public int? g4_improve_score { get; set; }
 
-        public string? g4_example { get; set; }
+        public string? g4_example_good { get; set; }
+
+        public string? g4_example_improve { get; set; }
 
         public string? g5_good_point { get; set; }
 
@@ -66,7 +74,9 @@ namespace SURVEY.Model.DTOs
 
         public int? g5_improve_score { get; set; }
 
-        public string? g5_example { get; set; }
+        public string? g5_example_good { get; set; }
+
+        public string? g5_example_improve { get; set; }
 
         public string? improvement_proposal { get; set; }
 
@@ -74,14 +84,34 @@ namespace SURVEY.Model.DTOs
 
         public DateTime? created_at { get; set; }
 
-        public string? g1_improvement_proposal { get; set; }
+        public string? g1_improvement_proposal_good { get; set; }
 
-        public string? g2_improvement_proposal { get; set; }
+        public string? g2_improvement_proposal_good { get; set; }
 
-        public string? g3_improvement_proposal { get; set; }
+        public string? g3_improvement_proposal_good { get; set; }   
+        public string? g4_improvement_proposal_good { get; set; }
 
-        public string? g4_improvement_proposal { get; set; }
+        public string? g5_improvement_proposal_good { get; set; }
 
-        public string? g5_improvement_proposal { get; set; }
+
+        public string? g1_improvement_proposal_improve { get; set; }
+
+        public string? g2_improvement_proposal_improve { get; set; }
+
+        public string? g3_improvement_proposal_improve { get; set; }
+
+        public string? g4_improvement_proposal_improve { get; set; }
+
+        public string? g5_improvement_proposal_improve { get; set; }
+
+        public string? g1_example => g1_example_good;
+
+        public string? g2_example => g2_example_good;
+
+        public string? g3_example => g3_example_good;
+
+        public string? g4_example => g4_example_good;
+
+        public string? g5_example => g5_example_good;
     }
 }
