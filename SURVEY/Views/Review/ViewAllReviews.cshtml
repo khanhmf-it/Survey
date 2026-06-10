@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Quản lý đánh giá";
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Title"];
 }
 <head>
     <link rel="stylesheet" href="~/css/Reviews.css" />
@@ -12,13 +13,13 @@
         <!-- HEADER -->
         <div class="dashboard-header">
             <div class="header-left">
-                <div class="hero-badge">📊 QUẢN LÝ ĐÁNH GIÁ</div>
-                <h1>Kho đánh giá <span class="highlight">nhân sự</span></h1>
-                <p>Xem, lọc và xuất tất cả các đánh giá đã được nhập vào hệ thống</p>
+                <div class="hero-badge">@Localizer["HeroBadge"]</div>
+                <h1><span class="highlight">@Localizer["PageHeadline"]</span></h1>
+                <p>@Localizer["PageDescription"]</p>
             </div>
             <div class="header-right">
                 <button class="btn-export" id="exportBtn">
-                    📥 Xuất dữ liệu (Excel)
+                    @Localizer["ExportButton"]
                 </button>
             </div>
         </div>
@@ -27,27 +28,27 @@
         <div class="filter-section">
             <div class="filter-grid">
                 <div class="filter-item">
-                    <label>🔍 Mã nhân viên</label>
-                    <input type="text" id="searchEmployeeId" placeholder="VD: NV001, NV002..." class="filter-input">
+                    <label>@Localizer["EmployeeCodeLabel"]</label>
+                    <input type="text" id="searchEmployeeId" placeholder="@Localizer["EmployeeCodePlaceholder"]" class="filter-input">
                 </div>
                 <div class="filter-item">
-                    <label>🏢 Group / Phòng ban</label>
-                    <input type="text" id="searchGroup" placeholder="VD: Nhóm Phát triển, Sale..." class="filter-input">
+                    <label>@Localizer["GroupLabel"]</label>
+                    <input type="text" id="searchGroup" placeholder="@Localizer["GroupPlaceholder"]" class="filter-input">
                 </div>
                 <div class="filter-item">
-                    <label>📅 Từ ngày</label>
+                    <label>@Localizer["FromDateLabel"]</label>
                     <input type="date" id="dateFrom" class="filter-input">
                 </div>
                 <div class="filter-item">
-                    <label>📅 Đến ngày</label>
+                    <label>@Localizer["ToDateLabel"]</label>
                     <input type="date" id="dateTo" class="filter-input">
                 </div>
                 <div class="filter-actions">
                     <button class="btn-search" id="searchBtn">
-                        🔍 Tìm kiếm
+                        @Localizer["SearchButton"]
                     </button>
                     <button class="btn-reset" id="resetBtn">
-                        ⟳ Reset
+                        @Localizer["ResetButton"]
                     </button>
                 </div>
             </div>
@@ -88,9 +89,9 @@
         <!-- DATA TABLE -->
         <div class="table-section">
             <div class="table-header">
-                <h3>📋 Danh sách đánh giá chi tiết</h3>
+                <h3>@Localizer["TableTitle"]</h3>
                 <div class="table-info">
-                    Hiển thị <span id="showingCount">0</span> / <span id="totalCount">0</span> bản ghi
+                    @Localizer["ShowingText"] <span id="showingCount">0</span> / <span id="totalCount">0</span> @Localizer["RecordsSuffix"]
                 </div>
             </div>
 
@@ -98,49 +99,49 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th rowspan="2">STT</th>
-                            <th rowspan="2">Mã NV</th>
-                            <th rowspan="2">Group/Phòng ban</th>
-                            <th rowspan="2">Thời gian</th>
-                            <th colspan="5">Nhóm 1 - Hợp tác</th>
-                            <th colspan="5">Nhóm 2 - Giao tiếp</th>
-                            <th colspan="5">Nhóm 3 - Đào tạo</th>
-                            <th colspan="5">Nhóm 4 - Trách nhiệm</th>
-                            <th colspan="5">Nhóm 5 - Kỷ luật</th>
-                            <th rowspan="2">Đề xuất cải tiến</th>
-                            <th rowspan="2">Điểm TB</th>
-                            <th rowspan="2">Thao tác</th>
+                            <th rowspan="2">@Localizer["ColNo"]</th>
+                            <th rowspan="2">@Localizer["ColEmployeeCode"]</th>
+                            <th rowspan="2">@Localizer["ColGroup"]</th>
+                            <th rowspan="2">@Localizer["ColTime"]</th>
+                            <th colspan="5">@Localizer["Group1Header"]</th>
+                            <th colspan="5">@Localizer["Group2Header"]</th>
+                            <th colspan="5">@Localizer["Group3Header"]</th>
+                            <th colspan="5">@Localizer["Group4Header"]</th>
+                            <th colspan="5">@Localizer["Group5Header"]</th>
+                            <th rowspan="2">@Localizer["ColProposal"]</th>
+                            <th rowspan="2">@Localizer["ColAvgScore"]</th>
+                            <th rowspan="2">@Localizer["ColAction"]</th>
                         </tr>
                         <tr>
-                            <th>Điểm mạnh</th>
-                            <th>Điểm</th>
-                            <th>Cần cải thiện</th>
-                            <th>Điểm</th>
-                            <th>Tình huống</th>
+                            <th>@Localizer["ColStrength"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColNeedImprove"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColSituation"]</th>
 
-                            <th>Điểm mạnh</th>
-                            <th>Điểm</th>
-                            <th>Cần cải thiện</th>
-                            <th>Điểm</th>
-                            <th>Tình huống</th>
+                            <th>@Localizer["ColStrength"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColNeedImprove"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColSituation"]</th>
 
-                            <th>Điểm mạnh</th>
-                            <th>Điểm</th>
-                            <th>Cần cải thiện</th>
-                            <th>Điểm</th>
-                            <th>Tình huống</th>
+                            <th>@Localizer["ColStrength"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColNeedImprove"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColSituation"]</th>
 
-                            <th>Điểm mạnh</th>
-                            <th>Điểm</th>
-                            <th>Cần cải thiện</th>
-                            <th>Điểm</th>
-                            <th>Tình huống</th>
+                            <th>@Localizer["ColStrength"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColNeedImprove"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColSituation"]</th>
 
-                            <th>Điểm mạnh</th>
-                            <th>Điểm</th>
-                            <th>Cần cải thiện</th>
-                            <th>Điểm</th>
-                            <th>Tình huống</th>
+                            <th>@Localizer["ColStrength"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColNeedImprove"]</th>
+                            <th>@Localizer["ColScore"]</th>
+                            <th>@Localizer["ColSituation"]</th>
                         </tr>
                     </thead>
                     <tbody id="reviewsTableBody">
@@ -148,7 +149,7 @@
                         <tr class="loading-row">
                             <td colspan="32" style="text-align: center; padding: 60px;">
                                 <div class="loading-spinner"></div>
-                                <p>Đang tải dữ liệu...</p>
+                                <p>@Localizer["LoadingText"]</p>
                             </td>
                         </tr>
                     </tbody>
@@ -159,16 +160,16 @@
             <div class="pagination-section">
                 <div class="pagination-info">
                     <select id="pageSizeSelect">
-                        <option value="10">10 / trang</option>
-                        <option value="25">25 / trang</option>
-                        <option value="50">50 / trang</option>
-                        <option value="100">100 / trang</option>
+                        <option value="10">@Localizer["PageSize10"]</option>
+                        <option value="25">@Localizer["PageSize25"]</option>
+                        <option value="50">@Localizer["PageSize50"]</option>
+                        <option value="100">@Localizer["PageSize100"]</option>
                     </select>
                 </div>
                 <div class="pagination-controls" id="paginationControls">
-                    <button class="page-btn" data-page="prev" disabled>‹ Trước</button>
+                    <button class="page-btn" data-page="prev" disabled>@Localizer["PrevButton"]</button>
                     <span class="page-numbers" id="pageNumbers"></span>
-                    <button class="page-btn" data-page="next">Sau ›</button>
+                    <button class="page-btn" data-page="next">@Localizer["NextButton"]</button>
                 </div>
             </div>
         </div>
@@ -177,7 +178,7 @@
         <div id="detailModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>📝 Chi tiết đánh giá</h3>
+                    <h3>@Localizer["ModalTitle"]</h3>
                     <span class="modal-close">&times;</span>
                 </div>
                 <div class="modal-body" id="modalBody">

@@ -132,6 +132,69 @@
   <data name="HeroSubDescription" xml:space="preserve">
     <value>調査は、上司・部下・同僚からの多角的な評価に基づき、協力、コミュニケーション、サポート、責任感を記録することを目的としています。</value>
   </data>
+  <data name="GuideToggleLabel" xml:space="preserve">
+    <value>📖 注記・ガイド（クリックで表示/非表示）</value>
+  </data>
+  <data name="PurposeSectionTitle" xml:space="preserve">
+    <value>■調査の目的</value>
+  </data>
+  <data name="PurposeParagraph1" xml:space="preserve">
+    <value>アンケート結果は1on1の対話と改善施策の検討に活用し、前向きで効率的かつ協力的な職場環境づくりにつなげます。</value>
+  </data>
+  <data name="PurposeParagraph2" xml:space="preserve">
+    <value>本アンケートは個人の成長と能力向上を目的としており、年次人事評価には使用しません。</value>
+  </data>
+  <data name="GuideSectionTitle" xml:space="preserve">
+    <value>■評価ガイド</value>
+  </data>
+  <data name="GuideParagraph1" xml:space="preserve">
+    <value>具体的な事実に基づいて評価してください。印象や感覚ではなく、実際に観察した行動・状況に基づくコメントをお願いします。</value>
+  </data>
+  <data name="GuideParagraph2" xml:space="preserve">
+    <value>客観性と公平性を保ってください。個人的な偏りを避け、単一の出来事だけでなく複数の観点からバランスよく評価してください。</value>
+  </data>
+  <data name="GuideParagraph3" xml:space="preserve">
+    <value>直近の印象だけに依存しないでください。直近の経験だけでなく、一定期間の業務全体を踏まえて判断してください。</value>
+  </data>
+  <data name="GuideParagraph4" xml:space="preserve">
+    <value>建設的なフィードバックを優先してください。具体例と改善提案を示し、個人の成長と業務効率向上につながる内容にしてください。</value>
+  </data>
+  <data name="PrincipleSectionTitle" xml:space="preserve">
+    <value>■実施の原則</value>
+  </data>
+  <data name="PrincipleParagraph1" xml:space="preserve">
+    <value>意見は客観的・誠実かつ建設的に記載してください。</value>
+  </data>
+  <data name="PrincipleParagraph2" xml:space="preserve">
+    <value>強みと改善可能な点の両方を記録してください。</value>
+  </data>
+  <data name="PrincipleParagraph3" xml:space="preserve">
+    <value>コメントの明確性と有用性を高めるため、具体的な事例や状況を記載してください。</value>
+  </data>
+  <data name="TargetSectionTitle" xml:space="preserve">
+    <value>■実施対象</value>
+  </data>
+  <data name="TargetParagraph1" xml:space="preserve">
+    <value>同一チームのメンバー：一次管理者を含め、相互評価を実施します。</value>
+  </data>
+  <data name="TargetParagraph2" xml:space="preserve">
+    <value>他チームのメンバー：業務で連携したことのある個人への評価を推奨します。</value>
+  </data>
+  <data name="TargetParagraph3" xml:space="preserve">
+    <value>一次管理者：担当チーム全メンバーおよび他の一次管理者を評価します。</value>
+  </data>
+  <data name="MethodSectionTitle" xml:space="preserve">
+    <value>■実施方法</value>
+  </data>
+  <data name="MethodParagraph1" xml:space="preserve">
+    <value>アンケートは紙面で匿名実施し、客観性を担保します。</value>
+  </data>
+  <data name="MethodParagraph2" xml:space="preserve">
+    <value>結果は中間管理者が集計し、1on1での対話に活用します。</value>
+  </data>
+  <data name="MethodParagraph3" xml:space="preserve">
+    <value>アンケートは部門の改善ニーズに応じて定期的に実施します。</value>
+  </data>
   <data name="ResultNote" xml:space="preserve">
     <value>✨ 結果は1on1での対話と、より良い職場環境づくりの基礎となります</value>
   </data>

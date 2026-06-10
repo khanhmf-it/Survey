@@ -100,3 +100,6 @@ C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\SURVEY.csproj.GenerateResourc
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\SURVEY.sourcelink.json
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\ja\SURVEY.resources.dll
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\SURVEY.csproj.Up2Date
+C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Release\net8.0\wwwroot\template\TemplateSurvey 360.xlsx
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.resources
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Release\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.ja.resources

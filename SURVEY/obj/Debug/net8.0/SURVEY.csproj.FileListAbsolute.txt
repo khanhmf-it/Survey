@@ -204,3 +204,5 @@ C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.pdb
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.genruntimeconfig.cache
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\ref\SURVEY.dll
 C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\wwwroot\template\TemplateSurvey 360.xlsx
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.resources
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.ja.resources

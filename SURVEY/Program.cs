@@ -10,6 +10,7 @@ using SURVEY.Service.Services.Implementations;
 using System.Data;
 using AutoMapper;
 using System.Globalization;
+using SURVEY.Service.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,9 @@ builder.Services.AddTransient<IDbConnection>(sp => new SqlConnection(surveyConne
 
 builder.Services.AddScoped<IEmployeeEvaluationRepsitory, EmployeeEvaluationRepsitory>();
 builder.Services.AddScoped<EmployeeEvaluationService>();
+
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
 
 // Khai báo AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));

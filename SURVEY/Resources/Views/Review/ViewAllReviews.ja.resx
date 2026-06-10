@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+ <data name="Title">
+		<value>評価管理</value>
+	</data>
+	<data name="HeroBadge">
+		<value>📊 評価管理</value>
+	</data>
+	<data name="PageHeadline">
+		<value>評価データ</value>
+	</data>
+	<data name="PageDescription">
+		<value>システムに登録された評価データを閲覧・検索・出力します</value>
+	</data>
+	<data name="ExportButton">
+		<value>📥 データ出力 (Excel)</value>
+	</data>
+	<data name="EmployeeCodeLabel">
+		<value>🔍 社員コード</value>
+	</data>
+	<data name="EmployeeCodePlaceholder">
+		<value>例: F000001, F000002...</value>
+	</data>
+	<data name="GroupLabel">
+		<value>🏢 グループ / 部署</value>
+	</data>
+	<data name="GroupPlaceholder">
+		<value>例: 開発チーム、営業...</value>
+	</data>
+	<data name="FromDateLabel">
+		<value>📅 開始日</value>
+	</data>
+	<data name="ToDateLabel">
+		<value>📅 終了日</value>
+	</data>
+	<data name="SearchButton">
+		<value>🔍 検索</value>
+	</data>
+	<data name="ResetButton">
+		<value>⟳ リセット</value>
+	</data>
+	<data name="TableTitle">
+		<value>📋 評価詳細一覧</value>
+	</data>
+	<data name="ShowingText">
+		<value>表示</value>
+	</data>
+	<data name="RecordsSuffix">
+		<value>件</value>
+	</data>
+	<data name="ColNo">
+		<value>No.</value>
+	</data>
+	<data name="ColEmployeeCode">
+		<value>社員コード</value>
+	</data>
+	<data name="ColGroup">
+		<value>グループ/部署</value>
+	</data>
+	<data name="ColTime">
+		<value>日時</value>
+	</data>
+	<data name="Group1Header">
+		<value>グループ1 - 協力</value>
+	</data>
+	<data name="Group2Header">
+		<value>グループ2 - コミュニケーション</value>
+	</data>
+	<data name="Group3Header">
+		<value>グループ3 - 育成</value>
+	</data>
+	<data name="Group4Header">
+		<value>グループ4 - 責任</value>
+	</data>
+	<data name="Group5Header">
+		<value>グループ5 - 規律</value>
+	</data>
+	<data name="ColProposal">
+		<value>改善提案</value>
+	</data>
+	<data name="ColAvgScore">
+		<value>平均点</value>
+	</data>
+	<data name="ColAction">
+		<value>操作</value>
+	</data>
+	<data name="ColStrength">
+		<value>強み</value>
+	</data>
+	<data name="ColScore">
+		<value>点数</value>
+	</data>
+	<data name="ColNeedImprove">
+		<value>改善点</value>
+	</data>
+	<data name="ColSituation">
+		<value>事例</value>
+	</data>
+	<data name="LoadingText">
+		<value>データを読み込み中...</value>
+	</data>
+	<data name="PageSize10">
+		<value>10 / ページ</value>
+	</data>
+	<data name="PageSize25">
+		<value>25 / ページ</value>
+	</data>
+	<data name="PageSize50">
+		<value>50 / ページ</value>
+	</data>
+	<data name="PageSize100">
+		<value>100 / ページ</value>
+	</data>
+	<data name="PrevButton">
+		<value>‹ 前へ</value>
+	</data>
+	<data name="NextButton">
+		<value>次へ ›</value>
+	</data>
+	<data name="ModalTitle">
+		<value>📝 評価詳細</value>
+	</data>
+</root>

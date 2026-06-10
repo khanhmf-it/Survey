@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using SURVEY.Models;
 using SURVEY.Service.Services.Implementations;
+using SURVEY.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace SURVEY.Controllers
 {
@@ -10,15 +12,19 @@ namespace SURVEY.Controllers
         private readonly ILogger<ReviewController> _logger;
         private readonly IWebHostEnvironment _env;
         private readonly EmployeeEvaluationService _employeeEvaluationService;
+        private readonly IAuthenticationService _authenticationService;
 
-        public ReviewController(ILogger<ReviewController> logger, EmployeeEvaluationService employeeEvaluationService, IWebHostEnvironment env)
+        public ReviewController(ILogger<ReviewController> logger, EmployeeEvaluationService employeeEvaluationService, IAuthenticationService authenticationService, IWebHostEnvironment env)
         {
             _logger = logger;
             _employeeEvaluationService = employeeEvaluationService;
+            _authenticationService = authenticationService;
             _env = env;
         }
-        public IActionResult ViewAllReviews()
+        public async Task<IActionResult> ViewAllReviews()
         {
+            var check = await EnsureUserAllowedAsync();
+            if (check != null) return check;
             return View();
         }
         // Tim kiem đánh giá công nhân viên
@@ -27,6 +33,8 @@ namespace SURVEY.Controllers
         {
             try
             {
+                var check = await EnsureUserAllowedAsync();
+                if (check != null) return check;
                 var reviews = await _employeeEvaluationService.GetEvaluationsByEvaluatorIdAsync(
                     searchModel.EmployeeId,
                     searchModel.Group, searchModel.DateFrom,
@@ -50,6 +58,8 @@ namespace SURVEY.Controllers
         {
             try
             {
+                var check = await EnsureUserAllowedAsync();
+                if (check != null) return check;
                 var reviews = await _employeeEvaluationService.GetEvaluationsByEvaluatorIdAsync(
                     searchModel.EmployeeId,
                     searchModel.Group, searchModel.DateFrom,
@@ -130,5 +140,41 @@ namespace SURVEY.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        private async Task<IActionResult?> EnsureUserAllowedAsync()
+        {
+            try
+            {
+                var userAdid = User.Identity?.Name?.Split('\\').LastOrDefault() ?? "";
+                if (string.IsNullOrEmpty(userAdid))
+                {
+                    return Unauthorized();
+                }
+
+                var existRes = await _authenticationService.CheckUserExistAsync(userAdid);
+                if (existRes == null)
+                {
+                    _logger.LogWarning("Authentication service returned null when checking user existence for {User}", userAdid);
+                    return Forbid();
+                }
+                if (!existRes.Success)
+                {
+                    _logger.LogWarning("Error checking user existence for {User}: {Message}", userAdid, existRes.Message);
+                    return BadRequest(existRes.Message);
+                }
+                if (!existRes.Data)
+                {
+                    _logger.LogInformation("User {User} is not allowed to perform this action.", userAdid);
+                    return Forbid();
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while verifying user permission");
+                return BadRequest("Error verifying user permission");
+            }
+        }
+
     }
 }

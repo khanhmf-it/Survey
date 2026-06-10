@@ -7,6 +7,20 @@
 
     let isSubmitting = false;
 
+    form.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" || event.isComposing) {
+            return;
+        }
+
+        const target = event.target;
+
+        if (target instanceof HTMLTextAreaElement || target instanceof HTMLButtonElement) {
+            return;
+        }
+
+        event.preventDefault();
+    });
+
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
@@ -67,12 +81,18 @@
             const textInputs = group.querySelectorAll(".text-input");
             const scoreSelects = group.querySelectorAll(".score-select");
 
+            const goodScore = parseNullableInt(scoreSelects[0]?.value);
+            const improveScore = parseNullableInt(scoreSelects[1]?.value);
+
             return {
                 goodPoint: (textInputs[0]?.value || "").trim(),
-                goodScore: parseNullableInt(scoreSelects[0]?.value),
-                improvePoint: (textInputs[1]?.value || "").trim(),
-                improveScore: parseNullableInt(scoreSelects[1]?.value),
-                example: (textInputs[2]?.value || "").trim()
+                goodScore,
+                improvePoint: (textInputs[3]?.value || "").trim(),
+                improveScore,
+                goodSituation: (textInputs[1]?.value || "").trim(),
+                improveSituation: (textInputs[4]?.value || "").trim(),
+                goodProposal: (textInputs[2]?.value || "").trim(),
+                improveProposal: (textInputs[5]?.value || "").trim()
             };
         });
 
@@ -93,31 +113,50 @@
             g1_good_score: groupValues[0]?.goodScore ?? null,
             g1_improve_point: groupValues[0]?.improvePoint || null,
             g1_improve_score: groupValues[0]?.improveScore ?? null,
-            g1_example: groupValues[0]?.example || null,
+            g1_example: mergeSituations(groupValues[0]?.goodSituation, groupValues[0]?.improveSituation),
+            g1_improvement_proposal: mergeProposals(groupValues[0]?.goodProposal, groupValues[0]?.improveProposal),
             g2_good_point: groupValues[1]?.goodPoint || null,
             g2_good_score: groupValues[1]?.goodScore ?? null,
             g2_improve_point: groupValues[1]?.improvePoint || null,
             g2_improve_score: groupValues[1]?.improveScore ?? null,
-            g2_example: groupValues[1]?.example || null,
+            g2_example: mergeSituations(groupValues[1]?.goodSituation, groupValues[1]?.improveSituation),
+            g2_improvement_proposal: mergeProposals(groupValues[1]?.goodProposal, groupValues[1]?.improveProposal),
             g3_good_point: groupValues[2]?.goodPoint || null,
             g3_good_score: groupValues[2]?.goodScore ?? null,
             g3_improve_point: groupValues[2]?.improvePoint || null,
             g3_improve_score: groupValues[2]?.improveScore ?? null,
-            g3_example: groupValues[2]?.example || null,
+            g3_example: mergeSituations(groupValues[2]?.goodSituation, groupValues[2]?.improveSituation),
+            g3_improvement_proposal: mergeProposals(groupValues[2]?.goodProposal, groupValues[2]?.improveProposal),
             g4_good_point: groupValues[3]?.goodPoint || null,
             g4_good_score: groupValues[3]?.goodScore ?? null,
             g4_improve_point: groupValues[3]?.improvePoint || null,
             g4_improve_score: groupValues[3]?.improveScore ?? null,
-            g4_example: groupValues[3]?.example || null,
+            g4_example: mergeSituations(groupValues[3]?.goodSituation, groupValues[3]?.improveSituation),
+            g4_improvement_proposal: mergeProposals(groupValues[3]?.goodProposal, groupValues[3]?.improveProposal),
             g5_good_point: groupValues[4]?.goodPoint || null,
             g5_good_score: groupValues[4]?.goodScore ?? null,
             g5_improve_point: groupValues[4]?.improvePoint || null,
             g5_improve_score: groupValues[4]?.improveScore ?? null,
-            g5_example: groupValues[4]?.example || null,
+            g5_example: mergeSituations(groupValues[4]?.goodSituation, groupValues[4]?.improveSituation),
+            g5_improvement_proposal: mergeProposals(groupValues[4]?.goodProposal, groupValues[4]?.improveProposal),
             improvement_proposal: proposal || null,
             total_score: totalScore,
             created_at: new Date().toISOString()
         };
+    }
+
+    function mergeSituations(goodSituation, improveSituation) {
+        const sections = [];
+        if (goodSituation) sections.push("Điểm tốt: " + goodSituation);
+        if (improveSituation) sections.push("Điểm cần cải thiện: " + improveSituation);
+        return sections.length > 0 ? sections.join("\n") : null;
+    }
+
+    function mergeProposals(goodProposal, improveProposal) {
+        const sections = [];
+        if (goodProposal) sections.push("Đề xuất phát huy: " + goodProposal);
+        if (improveProposal) sections.push("Đề xuất cải thiện: " + improveProposal);
+        return sections.length > 0 ? sections.join("\n") : null;
     }
 
     function parseNullableInt(value) {

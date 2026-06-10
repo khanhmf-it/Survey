@@ -57,25 +57,55 @@ public partial class SURVEYContext : DbContext
             entity.Property(e => e.evaluation_period)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.g1_example).HasColumnType("text");
-            entity.Property(e => e.g1_good_point).HasColumnType("text");
-            entity.Property(e => e.g1_improve_point).HasColumnType("text");
+            entity.Property(e => e.g1_example)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g1_good_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g1_improve_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
             entity.Property(e => e.g1_improvement_proposal).HasMaxLength(500);
-            entity.Property(e => e.g2_example).HasColumnType("text");
-            entity.Property(e => e.g2_good_point).HasColumnType("text");
-            entity.Property(e => e.g2_improve_point).HasColumnType("text");
+            entity.Property(e => e.g2_example)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g2_good_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g2_improve_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
             entity.Property(e => e.g2_improvement_proposal).HasMaxLength(500);
-            entity.Property(e => e.g3_example).HasColumnType("text");
-            entity.Property(e => e.g3_good_point).HasColumnType("text");
-            entity.Property(e => e.g3_improve_point).HasColumnType("text");
+            entity.Property(e => e.g3_example)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g3_good_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g3_improve_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
             entity.Property(e => e.g3_improvement_proposal).HasMaxLength(500);
-            entity.Property(e => e.g4_example).HasColumnType("text");
-            entity.Property(e => e.g4_good_point).HasColumnType("text");
-            entity.Property(e => e.g4_improve_point).HasColumnType("text");
+            entity.Property(e => e.g4_example)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g4_good_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g4_improve_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
             entity.Property(e => e.g4_improvement_proposal).HasMaxLength(500);
-            entity.Property(e => e.g5_example).HasColumnType("text");
-            entity.Property(e => e.g5_good_point).HasColumnType("text");
-            entity.Property(e => e.g5_improve_point).HasColumnType("text");
+            entity.Property(e => e.g5_example)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g5_good_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
+            entity.Property(e => e.g5_improve_point)
+                .HasMaxLength(1000)
+                .IsUnicode(true);
             entity.Property(e => e.g5_improvement_proposal).HasMaxLength(500);
             entity.Property(e => e.improvement_proposal).HasColumnType("text");
         });
