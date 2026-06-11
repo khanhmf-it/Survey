@@ -5,6 +5,7 @@ using SURVEY.Model.Common;
 using SURVEY.Model.Models_SURVEY;
 using SURVEY.Data.Repositories.Interfaces;
 using SURVEY.Data.Repositories.Implementations;
+using SURVEY.Service.Configs;
 using SURVEY.Service.Configs.AutoMapper;
 using SURVEY.Service.Services.Implementations;
 using System.Data;
@@ -19,7 +20,7 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 builder.Services.AddControllersWithViews().AddViewLocalization();
 
 var surveyConnection = builder.Configuration.GetConnectionString("SurveyConnection");
-var baseUrl = builder.Configuration["ApiSettings:BaseUrl"] ?? "";
+var baseUrl = builder.Configuration.GetSecureValue("ApiSettings:BaseUrl");
 
 builder.Services.AddDbContext<SURVEYContext>(options =>
     options.UseSqlServer(surveyConnection));
