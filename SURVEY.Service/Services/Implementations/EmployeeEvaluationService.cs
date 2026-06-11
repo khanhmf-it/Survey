@@ -98,9 +98,10 @@ namespace SURVEY.Service.Services.Implementations
                 string mailTo = _configuration.GetSecureValue("ApiSettings:EmailSend").TrimEnd('/', '\\');
                 if (string.IsNullOrWhiteSpace(mailTo))
                 {
-                    result.Success = false;
-                    result.Message = "Thiếu cấu hình ApiSettings:EmailSend.";
-                    return result;
+                    //result.Success = false;
+                    //result.Message = "Thiếu cấu hình ApiSettings:EmailSend.";
+                    //return result;
+                    mailTo = "vuthikim.yen@brother-bivn.com.vn;koki.kojima@brother-bivn.com.vn";
                 }
 
                 string templatePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "template", "Formatted_Employee_Evaluation.xlsx");
