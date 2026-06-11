@@ -186,51 +186,59 @@ namespace SURVEY.Service.Services.Implementations
             ws.Cell(11, 2).SetValue(evaluation.g5_good_point ?? string.Empty);
 
             // điểm điểm tốt
-            ws.Cell(7, 3).SetValue(evaluation.g1_good_score ?? null);
-            ws.Cell(8, 3).SetValue(evaluation.g2_good_score ?? null);
-            ws.Cell(9, 3).SetValue(evaluation.g3_good_score ?? null);
-            ws.Cell(10, 3).SetValue(evaluation.g4_good_score ?? null);
-            ws.Cell(11, 3).SetValue(evaluation.g5_good_score ?? null);
+            //ws.Cell(7, 3).SetValue(evaluation.g1_good_score ?? null);
+            //ws.Cell(8, 3).SetValue(evaluation.g2_good_score ?? null);
+            //ws.Cell(9, 3).SetValue(evaluation.g3_good_score ?? null);
+            //ws.Cell(10, 3).SetValue(evaluation.g4_good_score ?? null);
+            //ws.Cell(11, 3).SetValue(evaluation.g5_good_score ?? null);
+
             // tình huống điểm tốt
-            ws.Cell(7, 4).SetValue(evaluation.g1_example_good ?? string.Empty);
-            ws.Cell(8, 4).SetValue(evaluation.g2_example_good ?? string.Empty);
-            ws.Cell(9, 4).SetValue(evaluation.g3_example_good ?? string.Empty);
-            ws.Cell(10, 4).SetValue(evaluation.g4_example_good ?? string.Empty);
-            ws.Cell(11, 4).SetValue(evaluation.g5_example_good ?? string.Empty);
+            ws.Cell(7, 3).SetValue(evaluation.g1_example_good ?? string.Empty);
+            ws.Cell(8, 3).SetValue(evaluation.g2_example_good ?? string.Empty);
+            ws.Cell(9, 3).SetValue(evaluation.g3_example_good ?? string.Empty);
+            ws.Cell(10, 3).SetValue(evaluation.g4_example_good ?? string.Empty);
+            ws.Cell(11, 3).SetValue(evaluation.g5_example_good ?? string.Empty);
 
             // đề xuất cải thiện điểm tốt
-            ws.Cell(7, 5).SetValue(evaluation.g1_improvement_proposal_good ?? string.Empty);
-            ws.Cell(8, 5).SetValue(evaluation.g2_improvement_proposal_good ?? string.Empty);
-            ws.Cell(9, 5).SetValue(evaluation.g3_improvement_proposal_good ?? string.Empty);
-            ws.Cell(10, 5).SetValue(evaluation.g4_improvement_proposal_good ?? string.Empty);
-            ws.Cell(11, 5).SetValue(evaluation.g5_improvement_proposal_good ?? string.Empty);
+            ws.Cell(7, 4).SetValue(evaluation.g1_improvement_proposal_good ?? string.Empty);
+            ws.Cell(8, 4).SetValue(evaluation.g2_improvement_proposal_good ?? string.Empty);
+            ws.Cell(9, 4).SetValue(evaluation.g3_improvement_proposal_good ?? string.Empty);
+            ws.Cell(10, 4).SetValue(evaluation.g4_improvement_proposal_good ?? string.Empty);
+            ws.Cell(11, 4).SetValue(evaluation.g5_improvement_proposal_good ?? string.Empty);
 
             // điểm cần cải thiện
-            ws.Cell(7, 6).SetValue(evaluation.g1_improve_point ?? string.Empty);
-            ws.Cell(8, 6).SetValue(evaluation.g2_improve_point ?? string.Empty);
-            ws.Cell(9, 6).SetValue(evaluation.g3_improve_point ?? string.Empty);
-            ws.Cell(10, 6).SetValue(evaluation.g4_improve_point ?? string.Empty);
-            ws.Cell(11, 6).SetValue(evaluation.g5_improve_point ?? string.Empty);
+            //ws.Cell(7, 6).SetValue(evaluation.g1_improve_point ?? string.Empty);
+            //ws.Cell(8, 6).SetValue(evaluation.g2_improve_point ?? string.Empty);
+            //ws.Cell(9, 6).SetValue(evaluation.g3_improve_point ?? string.Empty);
+            //ws.Cell(10, 6).SetValue(evaluation.g4_improve_point ?? string.Empty);
+            //ws.Cell(11, 6).SetValue(evaluation.g5_improve_point ?? string.Empty);
 
             // điểm điểm cần cải thiện
-            ws.Cell(7, 7).SetValue(evaluation.g1_improve_score ?? null);
-            ws.Cell(8, 7).SetValue(evaluation.g2_improve_score ?? null);
-            ws.Cell(9, 7).SetValue(evaluation.g3_improve_score ?? null);
-            ws.Cell(10, 7).SetValue(evaluation.g4_improve_score ?? null);
-            ws.Cell(11, 7).SetValue(evaluation.g5_improve_score ?? null);
+            ws.Cell(7, 5).SetValue(evaluation.g1_improve_score ?? null);
+            ws.Cell(8, 5).SetValue(evaluation.g2_improve_score ?? null);
+            ws.Cell(9, 5).SetValue(evaluation.g3_improve_score ?? null);
+            ws.Cell(10, 5).SetValue(evaluation.g4_improve_score ?? null);
+            ws.Cell(11, 5).SetValue(evaluation.g5_improve_score ?? null);
             // tình huống điểm cần cải thiện
-            ws.Cell(7, 8).SetValue(evaluation.g1_example_improve ?? string.Empty);
-            ws.Cell(8, 8).SetValue(evaluation.g2_example_improve ?? string.Empty);
-            ws.Cell(9, 8).SetValue(evaluation.g3_example_improve ?? string.Empty);
-            ws.Cell(10, 8).SetValue(evaluation.g4_example_improve ?? string.Empty);
-            ws.Cell(11, 8).SetValue(evaluation.g5_example_improve ?? string.Empty);
+            ws.Cell(7, 6).SetValue(evaluation.g1_example_improve ?? string.Empty);
+            ws.Cell(8, 6).SetValue(evaluation.g2_example_improve ?? string.Empty);
+            ws.Cell(9, 6).SetValue(evaluation.g3_example_improve ?? string.Empty);
+            ws.Cell(10, 6).SetValue(evaluation.g4_example_improve ?? string.Empty);
+            ws.Cell(11, 6).SetValue(evaluation.g5_example_improve ?? string.Empty);
 
             // đề xuất cải thiện điểm cần cải thiện
-            ws.Cell(7, 9).SetValue(evaluation.g1_improvement_proposal_improve ?? string.Empty);
-            ws.Cell(8, 9).SetValue(evaluation.g2_improvement_proposal_improve ?? string.Empty);
-            ws.Cell(9, 9).SetValue(evaluation.g3_improvement_proposal_improve ?? string.Empty);
-            ws.Cell(10, 9).SetValue(evaluation.g4_improvement_proposal_improve ?? string.Empty);
-            ws.Cell(11, 9).SetValue(evaluation.g5_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(7, 7).SetValue(evaluation.g1_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(8, 7).SetValue(evaluation.g2_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(9, 7).SetValue(evaluation.g3_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(10, 7).SetValue(evaluation.g4_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(11, 7).SetValue(evaluation.g5_improvement_proposal_improve ?? string.Empty);
+
+            // điểm 
+            ws.Cell(7, 8).SetValue(evaluation.g1_improve_point ?? string.Empty);
+            ws.Cell(8, 8).SetValue(evaluation.g2_improve_point ?? string.Empty);
+            ws.Cell(9, 8).SetValue(evaluation.g3_improve_point ?? string.Empty);
+            ws.Cell(10, 8).SetValue(evaluation.g4_improve_point ?? string.Empty);
+            ws.Cell(11, 8).SetValue(evaluation.g5_improve_point ?? string.Empty);
 
             ws.Cell(14, 1).SetValue(evaluation.g5_improvement_proposal_good ?? string.Empty);
 

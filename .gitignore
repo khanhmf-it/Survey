@@ -24,6 +24,8 @@ packages/
 ## Logs
 *.log
 logs/
+## obj
+obj/
 
 ## ASP.NET Core / Razor secrets
 appsettings.Development.json
