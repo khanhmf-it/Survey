@@ -11,6 +11,7 @@ using SURVEY.Service.Configs;
 using SURVEY.Service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,6 +114,7 @@ namespace SURVEY.Service.Services.Implementations
                 }
 
                 evaluation.created_at ??= DateTime.Now;
+                await CreateOrUpdateSummaryFileAsync(evaluation);
 
                 attachmentPath = await CreateAttachmentFileAsync(templatePath, evaluation);
 
@@ -273,51 +275,128 @@ namespace SURVEY.Service.Services.Implementations
         private static string BuildMailBody(string department, int month, int year)
         {
             return $@"<body style=""margin: 0; padding: 0; font-family: 'Segoe UI', Arial, 'Noto Sans JP', sans-serif; background-color: #f5f7fb;"">
-    <table width=""100%"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #f5f7fb;"">
-        <tr>
-            <td align=""center"" style=""padding: 40px 20px;"">
-                <table width=""600"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #ffffff; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"">
-
+                <table width=""100%"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #f5f7fb;"">
                     <tr>
-                        <td style=""padding: 24px 28px 16px; border-bottom: 2px solid #e9ecef;"">
-                            <h2 style=""margin: 8px 0 4px; color: #4361ee;"">360 Survey</h2>
+                        <td align=""center"" style=""padding: 40px 20px;"">
+                            <table width=""600"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #ffffff; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"">
+
+                                <tr>
+                                    <td style=""padding: 24px 28px 16px; border-bottom: 2px solid #e9ecef;"">
+                                        <h2 style=""margin: 8px 0 4px; color: #4361ee;"">360 Survey</h2>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style=""padding: 24px 28px;"">
+                                        <p style=""margin: 0 0 16px; font-size: 15px; line-height: 1.5; color: #212529;"">
+                                            Dear <strong>Manager</strong>,
+                                        </p>
+
+                                        <p style=""margin: 0 0 12px; font-size: 14px; line-height: 1.5; color: #495057;"">
+                                            This is an automated notification to provide the results of the 360 survey.
+                                        </p>
+
+                                        <p style=""margin: 0 0 20px; font-size: 14px; line-height: 1.5; color: #495057;"">
+                                            The detailed results and analysis are attached for your review. Please refer to the attached file for more information.
+                                        </p>
+
+                                        <p style=""margin: 20px 0 0; font-size: 13px; color: #6c757d;"">
+                                            Best regards,<br>
+                                            360 Survey
+                                        </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style=""padding: 16px 28px 24px; border-top: 1px solid #e9ecef;"">
+                                        <p style=""margin: 0; font-size: 11px; color: #adb5bd;"">
+                                            📧 For any inquiries, please contact 2072 (Please do not reply to this email)<br>
+                                        </p>
+                                    </td>
+                                </tr>
+
+                            </table>
                         </td>
                     </tr>
-
-                    <tr>
-                        <td style=""padding: 24px 28px;"">
-                            <p style=""margin: 0 0 16px; font-size: 15px; line-height: 1.5; color: #212529;"">
-                                Dear <strong>Manager</strong>,
-                            </p>
-
-                            <p style=""margin: 0 0 12px; font-size: 14px; line-height: 1.5; color: #495057;"">
-                                This is an automated notification to provide the results of the 360 survey.
-                            </p>
-
-                            <p style=""margin: 0 0 20px; font-size: 14px; line-height: 1.5; color: #495057;"">
-                                The detailed results and analysis are attached for your review. Please refer to the attached file for more information.
-                            </p>
-
-                            <p style=""margin: 20px 0 0; font-size: 13px; color: #6c757d;"">
-                                Best regards,<br>
-                                360 Survey
-                            </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style=""padding: 16px 28px 24px; border-top: 1px solid #e9ecef;"">
-                            <p style=""margin: 0; font-size: 11px; color: #adb5bd;"">
-                                📧 For any inquiries, please contact 2072 (Please do not reply to this email)<br>
-                            </p>
-                        </td>
-                    </tr>
-
                 </table>
-            </td>
-        </tr>
-    </table>
-</body>";
+            </body>";
+        }
+
+        private async Task CreateOrUpdateSummaryFileAsync(employee_evaluationDTO evaluation)
+        {
+            string templatePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "template", "TemplateSurvey_360.xlsx");
+            if (!File.Exists(templatePath))
+            {
+                throw new FileNotFoundException("Không tìm thấy file mẫu TemplateSurvey 360.xlsx", templatePath);
+            }
+
+            var department = string.IsNullOrWhiteSpace(evaluation.department) ? "UnknownDepartment" : evaluation.department.Trim();
+            var employeeName = string.IsNullOrWhiteSpace(evaluation.employee_name) ? "UnknownEmployee" : evaluation.employee_name.Trim();
+
+            var safeDepartment = MakeSafeFileName(department, "UnknownDepartment");
+            var safeEmployeeName = MakeSafeFileName(employeeName, "UnknownEmployee");
+
+            var configuredSharePath = "\\\\APBIVNAP18\\SurveyFile";//_configuration["ApiSettings:SurveySummarySharePath"];
+            var protectedRoot = string.IsNullOrWhiteSpace(configuredSharePath)
+                ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "SURVEY", "EmployeeEvaluationSummary")
+                : configuredSharePath.Trim();
+            Directory.CreateDirectory(protectedRoot);
+
+            var summaryFilePath = Path.Combine(protectedRoot, $"Survey_360_Summary_{safeDepartment}_{safeEmployeeName}.xlsx");
+
+            using var workbook = File.Exists(summaryFilePath) ? new XLWorkbook(summaryFilePath) : new XLWorkbook(templatePath);
+            var ws = workbook.Worksheets.First();
+
+            var lastRow = ws.LastRowUsed()?.RowNumber() ?? 1;
+            var nextRow = Math.Max(lastRow + 1, 2);
+
+            ws.Cell(nextRow, 1).SetValue(department);
+            ws.Cell(nextRow, 2).SetValue(employeeName);
+
+            ws.Cell(nextRow, 3).SetValue(evaluation.g1_good_point ?? string.Empty);
+            ws.Cell(nextRow, 4).SetValue(evaluation.g1_improvement_proposal_good ?? string.Empty);
+            ws.Cell(nextRow, 5).SetValue(evaluation.g1_example_good ?? string.Empty);
+            ws.Cell(nextRow, 6).SetValue(evaluation.g1_improve_point ?? string.Empty);
+            ws.Cell(nextRow, 7).SetValue(evaluation.g1_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(nextRow, 8).SetValue(evaluation.g1_example_improve ?? string.Empty);
+            ws.Cell(nextRow, 9).SetValue(evaluation.g1_good_score);
+
+            ws.Cell(nextRow, 10).SetValue(evaluation.g2_good_point ?? string.Empty);
+            ws.Cell(nextRow, 11).SetValue(evaluation.g2_improvement_proposal_good ?? string.Empty);
+            ws.Cell(nextRow, 12).SetValue(evaluation.g2_example_good ?? string.Empty);
+            ws.Cell(nextRow, 13).SetValue(evaluation.g2_improve_point ?? string.Empty);
+            ws.Cell(nextRow, 14).SetValue(evaluation.g2_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(nextRow, 15).SetValue(evaluation.g2_example_improve ?? string.Empty);
+            ws.Cell(nextRow, 16).SetValue(evaluation.g2_good_score);
+
+            ws.Cell(nextRow, 17).SetValue(evaluation.g3_good_point ?? string.Empty);
+            ws.Cell(nextRow, 18).SetValue(evaluation.g3_improvement_proposal_good ?? string.Empty);
+            ws.Cell(nextRow, 19).SetValue(evaluation.g3_example_good ?? string.Empty);
+            ws.Cell(nextRow, 20).SetValue(evaluation.g3_improve_point ?? string.Empty);
+            ws.Cell(nextRow, 21).SetValue(evaluation.g3_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(nextRow, 22).SetValue(evaluation.g3_example_improve ?? string.Empty);
+            ws.Cell(nextRow, 23).SetValue(evaluation.g3_good_score);
+
+            ws.Cell(nextRow, 24).SetValue(evaluation.g4_good_point ?? string.Empty);
+            ws.Cell(nextRow, 25).SetValue(evaluation.g4_improvement_proposal_good ?? string.Empty);
+            ws.Cell(nextRow, 26).SetValue(evaluation.g4_example_good ?? string.Empty);
+            ws.Cell(nextRow, 27).SetValue(evaluation.g4_improve_point ?? string.Empty);
+            ws.Cell(nextRow, 28).SetValue(evaluation.g4_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(nextRow, 29).SetValue(evaluation.g4_example_improve ?? string.Empty);
+            ws.Cell(nextRow, 30).SetValue(evaluation.g4_good_score);
+
+            ws.Cell(nextRow, 31).SetValue(evaluation.g5_good_point ?? string.Empty);
+            ws.Cell(nextRow, 32).SetValue(evaluation.g5_improvement_proposal_good ?? string.Empty);
+            ws.Cell(nextRow, 33).SetValue(evaluation.g5_example_good ?? string.Empty);
+            ws.Cell(nextRow, 34).SetValue(evaluation.g5_improve_point ?? string.Empty);
+            ws.Cell(nextRow, 35).SetValue(evaluation.g5_improvement_proposal_improve ?? string.Empty);
+            ws.Cell(nextRow, 36).SetValue(evaluation.g5_example_improve ?? string.Empty);
+            ws.Cell(nextRow, 37).SetValue(evaluation.g5_good_score);
+
+            ws.Cell(nextRow, 38).SetValue(evaluation.improvement_proposal);
+            ws.Cell(nextRow, 39).SetValue(evaluation.created_at);
+
+            await Task.Run(() => workbook.SaveAs(summaryFilePath));
         }
     }
 }

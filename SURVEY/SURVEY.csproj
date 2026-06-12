@@ -22,7 +22,7 @@
     <Content Update="wwwroot\template\Formatted_Employee_Evaluation.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\template\TemplateSurvey 360.xlsx">
+    <Content Update="wwwroot\template\TemplateSurvey_360.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

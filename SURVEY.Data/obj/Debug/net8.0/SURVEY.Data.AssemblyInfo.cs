@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SURVEY.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be0d313272dc2d2bf753b92ec1cfc310f9215e00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d211f616bcff519f85a186d2af46c5d0bc3de5d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SURVEY.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SURVEY.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
