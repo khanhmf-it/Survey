@@ -94,8 +94,9 @@
             const textInputs = group.querySelectorAll(".text-input");
             const scoreSelects = group.querySelectorAll(".score-select");
 
-            const goodScore = parseNullableInt(scoreSelects[0]?.value);
-            const improveScore = parseNullableInt(scoreSelects[1]?.value);
+            const groupScore = parseNullableInt(scoreSelects[0]?.value);
+            const goodScore = groupScore;
+            const improveScore = parseNullableInt(scoreSelects[1]?.value) ?? groupScore;
 
             return {
                 goodPoint: (textInputs[0]?.value || "").trim(),

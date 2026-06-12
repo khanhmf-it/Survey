@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SURVEY.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71bc2931c4d99323ee3016949f7456de248bc400")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be0d313272dc2d2bf753b92ec1cfc310f9215e00")]
 [assembly: System.Reflection.AssemblyProductAttribute("SURVEY.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SURVEY.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

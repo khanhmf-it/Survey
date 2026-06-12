@@ -113,8 +113,6 @@ namespace SURVEY.Service.Services.Implementations
                 }
 
                 evaluation.created_at ??= DateTime.Now;
-                //var entity = _mapper.Map<employee_evaluation>(evaluation);
-                //await _repo.AddEmployeeEvaluationAsync(entity);
 
                 attachmentPath = await CreateAttachmentFileAsync(templatePath, evaluation);
 
@@ -207,18 +205,18 @@ namespace SURVEY.Service.Services.Implementations
             ws.Cell(11, 4).SetValue(evaluation.g5_improvement_proposal_good ?? string.Empty);
 
             // điểm cần cải thiện
-            //ws.Cell(7, 6).SetValue(evaluation.g1_improve_point ?? string.Empty);
-            //ws.Cell(8, 6).SetValue(evaluation.g2_improve_point ?? string.Empty);
-            //ws.Cell(9, 6).SetValue(evaluation.g3_improve_point ?? string.Empty);
-            //ws.Cell(10, 6).SetValue(evaluation.g4_improve_point ?? string.Empty);
-            //ws.Cell(11, 6).SetValue(evaluation.g5_improve_point ?? string.Empty);
+            ws.Cell(7, 5).SetValue(evaluation.g1_improve_point ?? string.Empty);
+            ws.Cell(8, 5).SetValue(evaluation.g2_improve_point ?? string.Empty);
+            ws.Cell(9, 5).SetValue(evaluation.g3_improve_point ?? string.Empty);
+            ws.Cell(10, 5).SetValue(evaluation.g4_improve_point ?? string.Empty);
+            ws.Cell(11, 5).SetValue(evaluation.g5_improve_point ?? string.Empty);
 
             // điểm điểm cần cải thiện
-            ws.Cell(7, 5).SetValue(evaluation.g1_improve_score ?? null);
-            ws.Cell(8, 5).SetValue(evaluation.g2_improve_score ?? null);
-            ws.Cell(9, 5).SetValue(evaluation.g3_improve_score ?? null);
-            ws.Cell(10, 5).SetValue(evaluation.g4_improve_score ?? null);
-            ws.Cell(11, 5).SetValue(evaluation.g5_improve_score ?? null);
+            //ws.Cell(7, 5).SetValue(evaluation.g1_improve_score ?? null);
+            //ws.Cell(8, 5).SetValue(evaluation.g2_improve_score ?? null);
+            //ws.Cell(9, 5).SetValue(evaluation.g3_improve_score ?? null);
+            //ws.Cell(10, 5).SetValue(evaluation.g4_improve_score ?? null);
+            //ws.Cell(11, 5).SetValue(evaluation.g5_improve_score ?? null);
             // tình huống điểm cần cải thiện
             ws.Cell(7, 6).SetValue(evaluation.g1_example_improve ?? string.Empty);
             ws.Cell(8, 6).SetValue(evaluation.g2_example_improve ?? string.Empty);
@@ -234,11 +232,11 @@ namespace SURVEY.Service.Services.Implementations
             ws.Cell(11, 7).SetValue(evaluation.g5_improvement_proposal_improve ?? string.Empty);
 
             // điểm 
-            ws.Cell(7, 8).SetValue(evaluation.g1_improve_point ?? string.Empty);
-            ws.Cell(8, 8).SetValue(evaluation.g2_improve_point ?? string.Empty);
-            ws.Cell(9, 8).SetValue(evaluation.g3_improve_point ?? string.Empty);
-            ws.Cell(10, 8).SetValue(evaluation.g4_improve_point ?? string.Empty);
-            ws.Cell(11, 8).SetValue(evaluation.g5_improve_point ?? string.Empty);
+            ws.Cell(7, 8).SetValue(evaluation.g1_improve_score ?? null);
+            ws.Cell(8, 8).SetValue(evaluation.g2_improve_score ?? null);
+            ws.Cell(9, 8).SetValue(evaluation.g3_improve_score ?? null);
+            ws.Cell(10, 8).SetValue(evaluation.g4_improve_score ?? null);
+            ws.Cell(11, 8).SetValue(evaluation.g5_improve_score ?? null);
 
             ws.Cell(14, 1).SetValue(evaluation.g5_improvement_proposal_good ?? string.Empty);
 
@@ -275,49 +273,51 @@ namespace SURVEY.Service.Services.Implementations
         private static string BuildMailBody(string department, int month, int year)
         {
             return $@"<body style=""margin: 0; padding: 0; font-family: 'Segoe UI', Arial, 'Noto Sans JP', sans-serif; background-color: #f5f7fb;"">
-                <table width=""100%"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #f5f7fb;"">
+    <table width=""100%"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #f5f7fb;"">
+        <tr>
+            <td align=""center"" style=""padding: 40px 20px;"">
+                <table width=""600"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #ffffff; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"">
+
                     <tr>
-                        <td align=""center"" style=""padding: 40px 20px;"">
-                            <table width=""600"" cellpadding=""0"" cellspacing=""0"" style=""background-color: #ffffff; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"">
-                    
-                                <tr>
-                                    <td style=""padding: 24px 28px 16px; border-bottom: 2px solid #e9ecef;"">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style=""padding: 24px 28px;"">
-                            
-                                        <p style=""margin: 0 0 16px; font-size: 15px; line-height: 1.5; color: #212529;"">
-                                            Dear <strong>Manager</strong>,
-                                        </p>
-                                        <p style=""margin: 0 0 12px; font-size: 14px; line-height: 1.5; color: #495057;"">
-                                            This is an automated notification to provide the results of the 360 survey.
-                                        </p>
-                                        <p style=""margin: 0 0 20px; font-size: 14px; line-height: 1.5; color: #495057;"">
-                                            The detailed results and analysis are attached for your review. Please refer to the attached file for more information.
-                                        </p>
-
-                                        <p style=""margin: 20px 0 0; font-size: 13px; color: #6c757d;"">
-                                            Best regards,<br>
-                                            360 Survey
-                                        </p>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style=""padding: 16px 28px 24px; border-top: 1px solid #e9ecef;"">
-                                        <p style=""margin: 0; font-size: 11px; color: #adb5bd;"">
-                                            📧 For any inquiries, please contact 2072 (Please do not reply to this email)<br>
-                                        </p>
-                                    </td>
-                                </tr>
-
-                            </table>
+                        <td style=""padding: 24px 28px 16px; border-bottom: 2px solid #e9ecef;"">
+                            <h2 style=""margin: 8px 0 4px; color: #4361ee;"">360 Survey</h2>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td style=""padding: 24px 28px;"">
+                            <p style=""margin: 0 0 16px; font-size: 15px; line-height: 1.5; color: #212529;"">
+                                Dear <strong>Manager</strong>,
+                            </p>
+
+                            <p style=""margin: 0 0 12px; font-size: 14px; line-height: 1.5; color: #495057;"">
+                                This is an automated notification to provide the results of the 360 survey.
+                            </p>
+
+                            <p style=""margin: 0 0 20px; font-size: 14px; line-height: 1.5; color: #495057;"">
+                                The detailed results and analysis are attached for your review. Please refer to the attached file for more information.
+                            </p>
+
+                            <p style=""margin: 20px 0 0; font-size: 13px; color: #6c757d;"">
+                                Best regards,<br>
+                                360 Survey
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style=""padding: 16px 28px 24px; border-top: 1px solid #e9ecef;"">
+                            <p style=""margin: 0; font-size: 11px; color: #adb5bd;"">
+                                📧 For any inquiries, please contact 2072 (Please do not reply to this email)<br>
+                            </p>
+                        </td>
+                    </tr>
+
                 </table>
-            </body>";
+            </td>
+        </tr>
+    </table>
+</body>";
         }
     }
 }

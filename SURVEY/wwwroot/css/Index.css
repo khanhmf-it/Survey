@@ -223,6 +223,7 @@
     border: 1px solid #e2e8f0;
     border-radius: 18px;
     margin-bottom: 18px;
+    overflow: hidden;
     transition: all 0.2s ease;
 }
 
@@ -270,10 +271,14 @@
 
 .evaluation-fields {
     display: grid;
-    grid-template-columns: minmax(220px, 1.5fr) 90px minmax(220px, 1.5fr) minmax(220px, 1.5fr);
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
     gap: 12px;
     padding: 14px 20px;
     align-items: start;
+}
+
+.group-card .evaluation-fields + .evaluation-fields {
+    border-top: 1px solid #edf2f7;
 }
 
 .evaluation-fields .field {
@@ -307,10 +312,10 @@
 }
 
 .score-select {
-    max-width: 80px;
-    min-width: 72px;
-    min-height: 72px;
-    padding: 8px 6px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
     text-align: center;
     font-weight: 600;
 }
@@ -377,7 +382,7 @@
 
 @media (max-width: 992px) {
     .evaluation-fields {
-        grid-template-columns: 1fr 100px 1fr 1fr;
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
     }
 }
 
@@ -414,3 +419,45 @@
         padding: 10px 12px;
     }
 }
+/* Phần cho điểm - 1 hàng ngang */
+.score-row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px 16px;
+    background: #f8fbff;
+    border-top: 1px solid #edf2f7;
+    border-radius: 0 0 16px 16px;
+}
+
+.score-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 90px;
+    max-width: 90px;
+}
+
+    .score-item label {
+        font-weight: 600;
+        font-size: 13px;
+        color: #334155;
+        white-space: nowrap;
+    }
+
+    .score-item select {
+        flex: 1;
+        max-width: 90px;
+        padding: 8px 10px;
+        border: 1px solid #d4dce8;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        background: #fff;
+        cursor: pointer;
+        text-align: center;
+    }
+
+        .score-item select:focus {
+            border-color: #4361ee;
+            outline: none;
+        }
