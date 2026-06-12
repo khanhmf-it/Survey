@@ -498,4 +498,7 @@
   <data name="MergeImproveProposalLabel" xml:space="preserve">
     <value>改善提案</value>
   </data>
+  <data name="submitMissingScoresMessage" xml:space="preserve">
+    <value>5つの評価基準グループすべてについて、点数を記入してください。</value>
+  </data>
 </root>

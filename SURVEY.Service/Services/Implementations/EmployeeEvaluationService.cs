@@ -87,6 +87,7 @@ namespace SURVEY.Service.Services.Implementations
         {
             var result = new GenericResponse<bool>();
             string? attachmentPath = null;
+            var isBackgroundSendStarted = false;
             try
             {
                 if (evaluation == null)
@@ -137,15 +138,29 @@ namespace SURVEY.Service.Services.Implementations
                     attachmentPaths = new List<string> { attachmentPath }
                 };
 
-                var sendResult = await EmailSender.SendEmailNotifyCustomSendMultiAttachFileAsync(emailForm);
-                result.Success = sendResult.Success;
-                result.Data = sendResult.Success;
-                result.Message = sendResult.Message;
-                if (sendResult.Success)
+                _ = Task.Run(async () =>
                 {
-                    result.Message = "Gửi mail thành công.";
-                }
+                    try
+                    {
+                        await EmailSender.SendEmailNotifyCustomSendMultiAttachFileAsync(emailForm);
+                    }
+                    catch
+                    {
+                       
+                    }
+                    finally
+                    {
+                        if (!string.IsNullOrWhiteSpace(attachmentPath) && File.Exists(attachmentPath))
+                        {
+                            File.Delete(attachmentPath);
+                        }
+                    }
+                });
+                isBackgroundSendStarted = true;
 
+                result.Success = true;
+                result.Data = true;
+                result.Message = "Đã ghi nhận đánh giá của bạn.";
 
             }
             catch(Exception ex)
@@ -155,7 +170,7 @@ namespace SURVEY.Service.Services.Implementations
             }
             finally
             {
-                if (!string.IsNullOrWhiteSpace(attachmentPath) && File.Exists(attachmentPath))
+                if (!isBackgroundSendStarted && !string.IsNullOrWhiteSpace(attachmentPath) && File.Exists(attachmentPath))
                 {
                     File.Delete(attachmentPath);
                 }

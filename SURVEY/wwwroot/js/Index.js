@@ -12,6 +12,7 @@
         mergeImproveSituationLabel: localizedNode?.dataset.mergeImproveSituationLabel || "Need improve",
         mergeGoodProposalLabel: localizedNode?.dataset.mergeGoodProposalLabel || "Keep doing",
         mergeImproveProposalLabel: localizedNode?.dataset.mergeImproveProposalLabel || "Improvement proposal"
+        ,submitMissingScoresMessage: localizedNode?.dataset.submitMissingScoresMessage || "Vui lòng điền đủ điểm cho 5 nhóm tiêu chí."
     };
 
     if (!form) {
@@ -50,6 +51,33 @@
             }
 
             const payload = buildPayload();
+
+            // Validate that all 5 groups have both good and improve scores filled
+            const requiredGroups = 5;
+            let missingScores = false;
+            for (let i = 0; i < requiredGroups; i++) {
+                const goodKey = `g${i + 1}_good_score`;
+                const improveKey = `g${i + 1}_improve_score`;
+                if (payload[goodKey] === null || payload[improveKey] === null) {
+                    missingScores = true;
+                    break;
+                }
+            }
+
+            if (missingScores) {
+                showResultModal({
+                    success: false,
+                    title: t.submitFailedTitle,
+                    message: t.submitMissingScoresMessage
+                });
+
+                isSubmitting = false;
+                if (submitButton) {
+                    submitButton.disabled = false;
+                }
+
+                return;
+            }
             const response = await fetch("/Home/SendMailSectionManager", {
                 method: "POST",
                 headers: {

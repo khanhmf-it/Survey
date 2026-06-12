@@ -498,4 +498,7 @@
   <data name="MergeImproveProposalLabel" xml:space="preserve">
     <value>Đề xuất cải thiện</value>
   </data>
+  <data name="submitMissingScoresMessage" xml:space="preserve">
+    <value>Vui lòng điền đủ điểm cho 5 nhóm tiêu chí.</value>
+  </data>
 </root>
