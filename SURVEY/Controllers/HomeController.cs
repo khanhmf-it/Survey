@@ -24,7 +24,7 @@ namespace SURVEY.Controllers
         }
         // chuyển ngôn ngữ
         [HttpGet]
-        public IActionResult SetLanguage(string culture, string returnUrl = "/")
+        public IActionResult SetLanguage(string culture, string returnUrl = "/survey")
         {
             if (string.IsNullOrWhiteSpace(culture))
             {
@@ -42,7 +42,7 @@ namespace SURVEY.Controllers
 
             if (!Url.IsLocalUrl(returnUrl))
             {
-                returnUrl = Url.Action("Index", "Home") ?? "/";
+                returnUrl = Url.Action("Index", "Home") ?? "/survey";
             }
 
             return LocalRedirect(returnUrl);

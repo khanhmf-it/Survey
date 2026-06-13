@@ -78,7 +78,7 @@
 
                 return;
             }
-            const response = await fetch("/Home/SendMailSectionManager", {
+            const response = await fetch("/Survey/Home/SendMailSectionManager", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
