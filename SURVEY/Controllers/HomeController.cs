@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using SURVEY.Model.DTOs;
 using SURVEY.Models;
 using SURVEY.Service.Services.Implementations;
+using Microsoft.Extensions.Configuration;
 
 namespace SURVEY.Controllers
 {
@@ -11,11 +12,13 @@ namespace SURVEY.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly EmployeeEvaluationService _employeeEvaluationService;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(ILogger<HomeController> logger, EmployeeEvaluationService employeeEvaluationService)
+        public HomeController(ILogger<HomeController> logger, EmployeeEvaluationService employeeEvaluationService, IConfiguration configuration)
         {
             _logger = logger;
             _employeeEvaluationService = employeeEvaluationService;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -24,7 +27,7 @@ namespace SURVEY.Controllers
         }
         // chuyển ngôn ngữ
         [HttpGet]
-        public IActionResult SetLanguage(string culture, string returnUrl = "/survey")
+        public IActionResult SetLanguage(string culture, string returnUrl = "")
         {
             if (string.IsNullOrWhiteSpace(culture))
             {
@@ -42,7 +45,10 @@ namespace SURVEY.Controllers
 
             if (!Url.IsLocalUrl(returnUrl))
             {
-                returnUrl = Url.Action("Index", "Home") ?? "/survey";
+                var baseUrl = _configuration["ApiSettings:BaseUrl"]?.TrimEnd('/') ?? string.Empty;
+                var actionUrl = Url.Action("Index", "Home") ?? string.Empty;
+                if (!actionUrl.StartsWith('/')) actionUrl = "/" + actionUrl;
+                returnUrl = (baseUrl + actionUrl) ?? string.Empty;
             }
 
             return LocalRedirect(returnUrl);

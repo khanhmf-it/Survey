@@ -13,12 +13,12 @@
         mergeGoodProposalLabel: localizedNode?.dataset.mergeGoodProposalLabel || "Keep doing",
         mergeImproveProposalLabel: localizedNode?.dataset.mergeImproveProposalLabel || "Improvement proposal"
         ,submitMissingScoresMessage: localizedNode?.dataset.submitMissingScoresMessage || "Vui lòng điền đủ điểm cho 5 nhóm tiêu chí."
+        ,submitMissingPointsMessage: localizedNode?.dataset.submitMissingPointsMessage || "Vui lòng nhập đủ mô tả điểm tốt và mô tả điểm cần cải thiện cho 5 nhóm tiêu chí."
     };
 
     if (!form) {
         return;
     }
-
     let isSubmitting = false;
 
     form.addEventListener("keydown", (event) => {
@@ -78,7 +78,35 @@
 
                 return;
             }
-            const response = await fetch("/Survey/Home/SendMailSectionManager", {
+            // Validate that all 5 groups have both good_point and improve_point (text descriptions)
+            let missingPoints = false;
+            for (let i = 0; i < requiredGroups; i++) {
+                const goodPointKey = `g${i + 1}_good_point`;
+                const improvePointKey = `g${i + 1}_improve_point`;
+                const goodPointVal = payload[goodPointKey];
+                const improvePointVal = payload[improvePointKey];
+
+                if (goodPointVal === null || improvePointVal === null || !String(goodPointVal).trim() || !String(improvePointVal).trim()) {
+                    missingPoints = true;
+                    break;
+                }
+            }
+
+            if (missingPoints) {
+                showResultModal({
+                    success: false,
+                    title: t.submitFailedTitle,
+                    message: t.submitMissingPointsMessage
+                });
+
+                isSubmitting = false;
+                if (submitButton) {
+                    submitButton.disabled = false;
+                }
+
+                return;
+            }
+            const response = await fetch((window.ApiBaseUrl || "") + "/Home/SendMailSectionManager", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -186,7 +186,7 @@
     }
 
     async function fetchReviews(payload) {
-        const response = await fetch("/Review/SearchReviews", {
+        const response = await fetch((window.ApiBaseUrl || "") + "/Review/SearchReviews", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -353,7 +353,7 @@
         syncFilterState();
 
         try {
-            const response = await fetch("/Review/ExportReviewsToExcel", {
+            const response = await fetch((window.ApiBaseUrl || "") + "/Review/ExportReviewsToExcel", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

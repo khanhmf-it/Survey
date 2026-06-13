@@ -101,6 +101,8 @@ C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\ExcelNumberFo
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\RBush.dll
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\Kang Zang\Downloads\Survey\Survey\SURVEY\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\wwwroot\template\Formatted_Employee_Evaluation.xlsx
+C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\wwwroot\template\TemplateSurvey_360.xlsx
 C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\appsettings.Development.json
 C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\appsettings.json
 C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\SURVEY.staticwebassets.runtime.json
@@ -173,8 +175,10 @@ C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\SURVEY.Data.pdb
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.csproj.AssemblyReference.cache
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Home.Index.resources
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.resources
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Shared._Layout.resources
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Home.Index.ja.resources
+C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.ja.resources
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Shared._Layout.ja.resources
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.csproj.GenerateResource.cache
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.GeneratedMSBuildEditorConfig.editorconfig
@@ -203,7 +207,3 @@ C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\refint\SURVEY.dll
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.pdb
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.genruntimeconfig.cache
 C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\ref\SURVEY.dll
-C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.resources
-C:\khanhmf\SURVEY\SURVEY\SURVEY\obj\Debug\net8.0\SURVEY.Resources.Views.Review.ViewAllReviews.ja.resources
-C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\wwwroot\template\Formatted_Employee_Evaluation.xlsx
-C:\khanhmf\SURVEY\SURVEY\SURVEY\bin\Debug\net8.0\wwwroot\template\TemplateSurvey_360.xlsx

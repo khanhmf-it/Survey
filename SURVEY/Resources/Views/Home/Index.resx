@@ -238,7 +238,7 @@
     <value>いくつかの点で改善必要</value>
   </data>
   <data name="Score1Title" xml:space="preserve">
-    <value>Kém</value>
+    <value>Cần cải thiện nhiều</value>
   </data>
   <data name="Score1Desc" xml:space="preserve">
     <value>Chưa đạt yêu cầu</value>
@@ -500,5 +500,8 @@
   </data>
   <data name="submitMissingScoresMessage" xml:space="preserve">
     <value>Vui lòng điền đủ điểm cho 5 nhóm tiêu chí.</value>
+  </data>
+  <data name="SubmitMissingPointsMessage" xml:space="preserve">
+    <value>Vui lòng nhập đủ mô tả Điểm tốt và Điểm cần cải thiện cho 5 nhóm tiêu chí.</value>
   </data>
 </root>

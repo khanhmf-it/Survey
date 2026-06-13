@@ -1,6 +1,7 @@
 ﻿@using System.Globalization
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
 @inject SURVEY.Service.Services.Interfaces.IAuthenticationService AuthenticationService
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
 
 @{
     var userAdid = User.Identity?.Name?.Split('\\').LastOrDefault() ?? "";
@@ -77,6 +78,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        window.ApiBaseUrl = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Configuration["ApiSettings:BaseUrl"] ?? ""));
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

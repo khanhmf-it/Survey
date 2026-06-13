@@ -1,58 +1,25 @@
-## Build output
-[Bb]in/
-[Oo]bj/
-out/
-publish/
-
-## Visual Studio
-.vs/
-*.user
+*.vsidx
+# User-specific files
 *.suo
+*.user
 *.userosscache
 *.sln.docstates
 
-## Rider / VS Code
-.idea/
-.vscode/
-
-## NuGet
-*.nupkg
-*.snupkg
-packages/
-!**/packages/build/
-
-## Logs
-*.log
-logs/
-## Cache and temporary files
-.cache/
-*.cache
-temp/
-tmp/
-Temp/
-TestResults/
-*.trx
-coverage/
-coverage.*
-lcov-report/
-## obj
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+**/[Bb]in/
+[Oo]bj/
+**/[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+.vs/
 obj/
-
-## ASP.NET Core / Razor secrets
-appsettings.Development.json
-secrets.json
-
-## Local database files
-*.mdf
-*.ldf
-*.db
-*.sqlite
-*.sqlite3
-
-## OS files
-.DS_Store
-Thumbs.db
-
-## Node (if used for frontend tooling)
-node_modules/
-
